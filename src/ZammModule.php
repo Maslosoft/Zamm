@@ -23,10 +23,11 @@ use Maslosoft\Ilmatar\Components\WebModule;
  */
 class ZammModule extends WebModule
 {
-
-	public function getBaseDir()
+	public $projects = [];
+	
+	public function hasProject($name)
 	{
-		return realpath(__DIR__ . '/../../');
+		return isset($this->projects[$name]);
 	}
 
 }
