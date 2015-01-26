@@ -1,0 +1,21 @@
+{
+    "name": "maslosoft/zamm",
+    "description": "Zamm is a documentation module",
+    "require-dev": {
+        "maslosoft/hedron": "*"
+    },
+    "license": "New BSD",
+    "authors": [
+        {
+            "name": "Peter Maselkowski",
+            "email": "pmaselkowski@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+	"autoload": {
+		"psr-4": {
+			"Maslosoft\\Zamm\\": "src/"
+		}
+	}
+}
