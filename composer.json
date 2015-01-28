@@ -12,10 +12,13 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "maslosoft/ilmatar-widgets": "*",
+        "maslosoft/ilmatar-components": "*"
+    },
 	"autoload": {
 		"psr-4": {
-			"Maslosoft\\Zamm\\": "src/"
+			"Maslosoft\\Zamm\\": "src"
 		}
 	}
 }
