@@ -14,7 +14,6 @@
 
 namespace Maslosoft\Zamm;
 
-use Maslosoft\Ilmatar\Modules\Dev\Builders\Headers\HeaderApplier;
 use Maslosoft\Ilmatar\Modules\Ua\Signals\AccountMenuItems;
 use Maslosoft\Ilmatar\Widgets\Security\AdminMenuItems;
 

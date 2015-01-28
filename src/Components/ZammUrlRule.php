@@ -32,30 +32,10 @@ class PageUrlRule extends CBaseUrlRule
 
 	public function parseUrl($manager, $request, $pathInfo, $rawPathInfo)
 	{
-		$parts = preg_split('~/~', $pathInfo, PREG_SPLIT_NO_EMPTY);	
-		if(count($parts) < 2)
-		{
-			return false;
-		}
-		
-		$srcPrefix = array_shift($parts);
-		$project = array_shift($parts);
-		
-		$prefix = tx('docs', 'zamm.url.rule');
-		
-		if($srcPrefix !== $prefix)
-		{
-			return false;
-		}
-		
-		$module = Yii::app()->getModule('zamm');
-		
-		if(!$module->hasDocs($project))
-		{
-			return false;
-		}
-
 		// Match and set language
+		/**
+		 * TODO Refactor it to parent class method
+		 */
 		$matches = [];
 
 		$lang = Yii::app()->defaultLanguage;
@@ -86,12 +66,31 @@ class PageUrlRule extends CBaseUrlRule
 		$pattern = sprintf('~^%s/~', $lang);
 		$url = preg_replace($pattern, '', $pathInfo);
 
-
-		// Use cursor and findAll for maximum performance
-		// https://blog.serverdensity.com/checking-if-a-document-exists-mongodb-slow-findone-vs-find/
-
+		$parts = preg_split('~/~', $url, PREG_SPLIT_NO_EMPTY);
+		if(count($parts) < 2)
+		{
+			return false;
+		}
+		
+		$srcPrefix = array_shift($parts);
+		$project = array_shift($parts);
+		
+		$prefix = tx('docs', 'zamm.url.rule');
+		
+		if($srcPrefix !== $prefix)
+		{
+			return false;
+		}
+		
+		$module = Yii::app()->getModule('zamm');
+		
+		if(!$module->hasDocs($project))
+		{
+			return false;
+		}
+		
 		// If found use page view route
-		$route = sprintf('zamm/docs/view/project/%s/path/%s', $project, $pathInfo);
+		$route = sprintf('zamm/docs/view/project/%s/path/%s', $project, urlencode($url));
 		return $route;
 	}
 
