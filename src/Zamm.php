@@ -12,10 +12,15 @@
 
 namespace Maslosoft\Zamm;
 
+use Maslosoft\EmbeDi\EmbeDi;
+use Maslosoft\Zamm\Converters\IConverter;
+use Maslosoft\Zamm\Converters\PhpConverter;
 use Maslosoft\Zamm\Decorators\StarRemover;
 use Maslosoft\Zamm\Extractors\AddendumExtractor;
 use Maslosoft\Zamm\Extractors\IExtractor;
 use Maslosoft\Zamm\Extractors\NullExtractor;
+use Maslosoft\Zamm\FileDecorators\IFileDecorator;
+use Maslosoft\Zamm\FileDecorators\IgnoreFileDecorator;
 use Maslosoft\Zamm\Interfaces\ISourceAccessor;
 use Maslosoft\Zamm\Renderers\ClassRenderer;
 use Maslosoft\Zamm\Renderers\IClassRenderer;
@@ -39,6 +44,7 @@ class Zamm implements ISourceAccessor
 	use Traits\SourceMagic;
 
 	const Version = '1.0.0';
+	const DefaultInstanceId = 'zamm';
 
 	/**
 	 * Configuration of decorators.
@@ -59,6 +65,32 @@ class Zamm implements ISourceAccessor
 		// Method decorators
 		IMethodRenderer::class => [
 		],
+	];
+
+	/**
+	 * Configuration of file decorators.
+	 * This should be array with keys of converter names and values of file decorator classes.
+	 * @var string[][]
+	 */
+	public $fileDecorators = [
+		// All file decorators
+		IFileDecorator::class => [
+		],
+		// PHP converter decorators
+		PhpConverter::class => [
+			IgnoreFileDecorator::class
+		]
+	];
+
+	/**
+	 * Converters
+	 * Array of class names of converters. These will be applied in order specified here, to all files.
+	 * All converters should implement `IConverter` interface.
+	 * @see IConverter
+	 * @var string[]
+	 */
+	public $converters = [
+		PhpConverter::class
 	];
 
 	/**
@@ -83,24 +115,36 @@ class Zamm implements ISourceAccessor
 	 */
 	private $_className = '';
 
+	/**
+	 * EmbeDi instance
+	 * @var EmbeDi
+	 */
+	private $_id = null;
+
 	public function __construct($className = null)
 	{
 		$this->_className = $className;
+		$this->_di = new EmbeDi(self::DefaultInstanceId);
+		$this->_di->configure($this);
 	}
 
 	public function init()
 	{
-		
+		$this->_di->store($this);
 	}
 
 	public function methods()
 	{
-
+		/**
+		 * TODO Return all method names
+		 */
 	}
 
 	public function properties()
 	{
-		
+		/**
+		 * TODO Return all property names
+		 */
 	}
 
 	public function method($name)
@@ -136,6 +180,12 @@ class Zamm implements ISourceAccessor
 			$this->_extractor = $extractor;
 		}
 		return $this->_extractor;
+	}
+
+	public static function __callStatic($name, $arguments)
+	{
+		$className = get_called_class();
+		return new MethodRenderer((new Zamm($className))->getExtractor(), $name);
 	}
 
 	/**

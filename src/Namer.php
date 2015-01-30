@@ -43,8 +43,15 @@ class Namer implements ISourceAccessor
 		return sprintf('%s::%s', $this->_className, $name);
 	}
 
+	public static function __callStatic($name, $arguments)
+	{
+		return sprintf('%s', $name);
+	}
+
 	public function __toString()
 	{
 		return $this->_className;
 	}
+
+
 }

@@ -23,12 +23,7 @@ trait SourceMagic
 		return $this->property($name);
 	}
 
-	public function __call($name)
-	{
-		return $this->method($name);
-	}
-
-	public function __callStatic($name)
+	public function __call($name, $arguments)
 	{
 		return $this->method($name);
 	}

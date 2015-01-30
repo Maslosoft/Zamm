@@ -6,20 +6,23 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Interfaces;
+namespace Maslosoft\Zamm\Converters;
 
 /**
- *
+ * Convert PHP documentation file into md
+ * 
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface ISourceAccessor
+class PhpConverter implements IConverter
 {
+	public function input($documentation)
+	{
+		
+	}
 
-	public function __construct($className = null);
+	public function output()
+	{
 
-	public static function __callStatic($name, $arguments);
+	}
 
-	public function method($name);
-
-	public function property($name);
 }

@@ -6,20 +6,19 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Interfaces;
+namespace Maslosoft\Zamm\FileDecorators;
+
+use Maslosoft\Zamm\Interfaces\IDecorator;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface ISourceAccessor
+interface IFileDecorator extends IDecorator
 {
-
-	public function __construct($className = null);
-
-	public static function __callStatic($name, $arguments);
-
-	public function method($name);
-
-	public function property($name);
+	/**
+	 * 
+	 * @param string $documentation
+	 */
+	public function decorate($documentation);
 }

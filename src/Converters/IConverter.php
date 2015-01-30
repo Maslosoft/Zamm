@@ -14,10 +14,15 @@ namespace Maslosoft\Zamm\Converters;
  */
 interface IConverter
 {
-	public function input($file);
+	/**
+	 *
+	 * @param string $documentation
+	 * @return IConverter
+	 */
+	public function input($documentation);
 	
 	/**
-	 * @return file name
+	 * @return string name
 	 */
 	public function output();
 }

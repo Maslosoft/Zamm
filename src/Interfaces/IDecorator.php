@@ -10,9 +10,7 @@
  *
  */
 
-namespace Maslosoft\Zamm\Decorators;
-
-use Maslosoft\Zamm\Renderers\IRenderer;
+namespace Maslosoft\Zamm\Interfaces;
 
 /**
  *
@@ -20,10 +18,6 @@ use Maslosoft\Zamm\Renderers\IRenderer;
  */
 interface IDecorator
 {
-
-	public function setRenderer(IRenderer $renderer);
-
-	public function getRenderer();
 
 	public function decorate(&$docComment);
 }

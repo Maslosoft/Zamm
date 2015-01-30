@@ -18,7 +18,10 @@
     "require": {
         "maslosoft/addendum": "~3.0",
         "symfony/console": "~2.6",
-        "maslosoft/signals": "~1.0"
+        "maslosoft/signals": "~1.0",
+        "symfony/finder": "~2.6",
+        "maslosoft/embedi": "*",
+        "maslosoft/miniview": "*"
     },
 	"autoload": {
 		"psr-4": {

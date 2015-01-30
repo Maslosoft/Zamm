@@ -6,20 +6,21 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Interfaces;
+namespace Maslosoft\Zamm\Meta;
 
 /**
+ * PhpToken
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface ISourceAccessor
+class PhpToken
 {
+	public $type = '';
 
-	public function __construct($className = null);
+	
 
-	public static function __callStatic($name, $arguments);
-
-	public function method($name);
-
-	public function property($name);
+	public function __construct($data)
+	{
+		;
+	}
 }

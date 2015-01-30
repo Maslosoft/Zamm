@@ -15,7 +15,7 @@ use Maslosoft\Zamm\Meta\TagMeta;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class ZammTags extends BaseDecorator implements IDecorator
+class ZammTags extends RendererDecorator implements IRendererDecorator
 {
 	const Open = '<!-- ZAMM:';
 	const Close = ':ZAMM -->';

@@ -15,7 +15,7 @@ use Maslosoft\Zamm\Renderers\IRenderer;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-abstract class BaseDecorator implements IDecorator
+abstract class RendererDecorator implements IRendererDecorator
 {
 
 	/**

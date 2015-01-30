@@ -22,10 +22,10 @@ class SingleCommand extends BaseCommand
 	protected function configure()
 	{
 		parent::configure();
-		$this->setName("doc:single");
+		$this->setName("doc:make");
 		$this->setDescription("Convert single file");
 		$this->setHelp(<<<EOT
-The <info>doc:single</info> command converts single file according to <info>--input</info> and <info>--output</info> params.
+The <info>doc:make</info> command convert one or more directories or files
 EOT
 		);
 	}

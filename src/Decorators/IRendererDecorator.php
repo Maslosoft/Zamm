@@ -6,20 +6,19 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Interfaces;
+namespace Maslosoft\Zamm\Decorators;
+
+use Maslosoft\Zamm\Interfaces\IDecorator;
+use Maslosoft\Zamm\Renderers\IRenderer;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface ISourceAccessor
+interface IRendererDecorator extends IDecorator
 {
 
-	public function __construct($className = null);
+	public function setRenderer(IRenderer $renderer);
 
-	public static function __callStatic($name, $arguments);
-
-	public function method($name);
-
-	public function property($name);
+	public function getRenderer();
 }

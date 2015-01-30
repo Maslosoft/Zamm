@@ -13,7 +13,7 @@ namespace Maslosoft\Zamm\Decorators;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class StarRemover extends BaseDecorator implements IDecorator
+class StarRemover extends RendererDecorator implements IRendererDecorator
 {
 	public function decorate(&$docComment)
 	{
