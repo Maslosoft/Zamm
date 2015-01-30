@@ -23,5 +23,9 @@ interface IRenderer
 
 	public function __construct(IExtractor $extractor, $name = null);
 
+	public function getClassName();
+
+	public function getName();
+
 	public function __toString();
 }

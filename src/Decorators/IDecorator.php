@@ -12,12 +12,18 @@
 
 namespace Maslosoft\Zamm\Decorators;
 
+use Maslosoft\Zamm\Renderers\IRenderer;
+
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
 interface IDecorator
 {
+
+	public function setRenderer(IRenderer $renderer);
+
+	public function getRenderer();
 
 	public function decorate(&$docComment);
 }

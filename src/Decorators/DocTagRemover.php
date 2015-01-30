@@ -9,16 +9,16 @@
 namespace Maslosoft\Zamm\Decorators;
 
 /**
- * DocTagRemover
+ * This removes annotations. This means everything starting with `@` and low case letter
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class DocTagRemover implements IDecorator
+class DocTagRemover extends BaseDecorator implements IDecorator
 {
 
 	public function decorate(&$docComment)
 	{
-
+		
 	}
 
 }

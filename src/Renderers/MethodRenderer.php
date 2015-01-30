@@ -25,7 +25,7 @@ class MethodRenderer extends BaseRenderer implements IRenderer, IMethodRenderer
 	public function __toString()
 	{
 		$docComment = $this->extractor->getMethod($this->name);
-		(new Decorator())->decorate($docComment);
+		(new Decorator($this))->decorate($docComment);
 		return $docComment;
 	}
 

@@ -19,7 +19,7 @@ use Maslosoft\Extractors\IExtractor;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-abstract class BaseRenderer
+abstract class BaseRenderer implements IRenderer
 {
 
 	/**
@@ -38,6 +38,16 @@ abstract class BaseRenderer
 	{
 		$this->extractor = $extractor;
 		$this->name = $name;
+	}
+
+	public function getClassName()
+	{
+		return $this->extractor->getClassName();
+	}
+
+	public function getName()
+	{
+		return $this->name;
 	}
 
 }

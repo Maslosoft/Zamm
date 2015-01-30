@@ -6,18 +6,22 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Decorators;
+namespace Maslosoft\Zamm;
 
 /**
- * Remove stars `*` which surrounds php doc comments, like this one.
+ * This simply return names of methods and properties.
+ * This is helper for IDE's.
+ * Use this together with @var type hint.
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class StarRemover extends BaseDecorator implements IDecorator
+class Namer
 {
-	public function decorate(&$docComment)
+
+	public function __construct($className)
 	{
-		
+		;
 	}
 
+	
 }

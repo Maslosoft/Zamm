@@ -21,6 +21,8 @@ interface IExtractor
 
 	public function setClassName($name);
 
+	public function getClassName();
+
 	public function getClass();
 
 	public function getMethod($name);

@@ -9,11 +9,11 @@
 namespace Maslosoft\Zamm\Decorators;
 
 /**
- * AnnotationRemover
+ * This removes annotations. This means everything starting with `@` and capital letter
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class AnnotationRemover implements IDecorator
+class AnnotationRemover extends BaseDecorator implements IDecorator
 {
 
 	public function decorate(&$docComment)
