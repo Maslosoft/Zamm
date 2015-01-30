@@ -8,6 +8,8 @@
 
 namespace Maslosoft\Zamm;
 
+use Maslosoft\Zamm\Interfaces\ISourceAccessor;
+
 /**
  * This simply return names of methods and properties.
  * This is helper for IDE's.
@@ -15,13 +17,34 @@ namespace Maslosoft\Zamm;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class Namer
+class Namer implements ISourceAccessor
 {
+
+	use Traits\SourceMagic;
+
+	/**
+	 * Working class name
+	 * @var string
+	 */
+	private $_className = '';
 
 	public function __construct($className)
 	{
-		;
+		$this->_className = $className;
 	}
 
-	
+	public function method($name)
+	{
+		return sprintf('%s::%s()', $this->_className, $name);
+	}
+
+	public function property($name)
+	{
+		return sprintf('%s::%s', $this->_className, $name);
+	}
+
+	public function __toString()
+	{
+		return $this->_className;
+	}
 }

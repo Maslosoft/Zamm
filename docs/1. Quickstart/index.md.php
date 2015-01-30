@@ -1,13 +1,27 @@
 <?php
 
+use Maslosoft\Zamm\Ignore;
+use Maslosoft\Zamm\Source;
+use Maslosoft\Zamm\Zamm;
 ?>
-# Quick Start
+<?php
+$zamm = new Zamm(Zamm::class);
+$ignore = new Zamm(Ignore::class);
+/* @var $ignore Ignore */
+$source = new Zamm(Source::class);
+/* @var $source Source */
+?>
 
-##<?= $zamm = new Zamm(Zamm::class);?>
+# Zamm Quick Start Guide
 
-##<?= $ignore = new Zamm(Ignore::class);?>
-<?= $ignore::open();?>
-<?= $ignore::close();?>
+##<?= $zamm; ?>
+
+
+##<?= $source; ?>
+
+##<?= $ignore; ?>
+<?= $ignore::open(); ?>
+<?= $ignore::close(); ?>
 
 Example:
 <?php
