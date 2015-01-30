@@ -22,6 +22,8 @@ use Maslosoft\Zamm\Extractors\NullExtractor;
 use Maslosoft\Zamm\FileDecorators\IFileDecorator;
 use Maslosoft\Zamm\FileDecorators\IgnoreFileDecorator;
 use Maslosoft\Zamm\Interfaces\ISourceAccessor;
+use Maslosoft\Zamm\Outputs\FileOutput;
+use Maslosoft\Zamm\Outputs\IOutput;
 use Maslosoft\Zamm\Renderers\ClassRenderer;
 use Maslosoft\Zamm\Renderers\IClassRenderer;
 use Maslosoft\Zamm\Renderers\IMethodRenderer;
@@ -92,6 +94,17 @@ class Zamm implements ISourceAccessor
 	 */
 	public $converters = [
 		PhpConverter::class
+	];
+
+	/**
+	 * Outputs classes
+	 * Array of class names of outputs. These will be applied in order specified here, to all files.
+	 * All outputs should implement `IOutput` interface.
+	 * @see IOutput
+	 * @var string[]
+	 */
+	public $outputs = [
+		FileOutput::class
 	];
 
 	/**

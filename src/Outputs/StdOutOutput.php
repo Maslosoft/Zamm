@@ -6,23 +6,18 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Converters;
+namespace Maslosoft\Zamm\Outputs;
 
 /**
+ * StdOutOutput
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IConverter
+class StdOutOutput implements IOutput
 {
-	/**
-	 *
-	 * @param string $documentation
-	 * @return IConverter
-	 */
-	public function input($documentation, $fileName);
-	
-	/**
-	 * @return string file name
-	 */
-	public function output();
+	public function output($documentation, $fileName = null)
+	{
+		echo $documentation;
+	}
+
 }
