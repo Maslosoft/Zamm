@@ -8,7 +8,6 @@
 
 namespace Maslosoft\Zamm\Commands;
 
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -17,16 +16,15 @@ use Symfony\Component\Console\Output\OutputInterface;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class SingleCommand extends Command
+class SingleCommand extends BaseCommand
 {
 
 	protected function configure()
 	{
-		$this->setName("doc:single")
-				->setDescription("Convert single file")
-				->setDefinition(array(
-				))
-				->setHelp(<<<EOT
+		parent::configure();
+		$this->setName("doc:single");
+		$this->setDescription("Convert single file");
+		$this->setHelp(<<<EOT
 The <info>doc:single</info> command converts single file according to <info>--input</info> and <info>--output</info> params.
 EOT
 		);
