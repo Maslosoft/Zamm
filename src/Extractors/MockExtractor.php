@@ -37,12 +37,43 @@ COMMENT;
 
 	public function getMethod($name)
 	{
-		
+		return <<<COMMENT
+		/**
+		 * This is mock method $name comment.
+		 * Normally it should contain method description.
+		 * But this one contains only dummy tex and:
+		 * <ul>
+		 *		<li>some method php doc</li>
+		 *		<li>some html</li>
+		 *		<li>some method annotations</li>
+		 * </ul>
+		 * @author Piotr Maselkowski <pmaselkowski at gmail.com>
+		 * @since 1.0.2
+		 * @Target('method')
+		 * @param int \$id Identifier of user in mock method
+		 * @param string \$name Name of user in mock method
+		 */
+COMMENT;
 	}
 
 	public function getProperty($name)
 	{
-
+		return <<<COMMENT
+		/**
+		 * This is mock property $name comment.
+		 * Normally it should contain property description.
+		 * But this one contains only dummy tex and:
+		 * <ul>
+		 *		<li>some property php doc</li>
+		 *		<li>some html</li>
+		 *		<li>some property annotations</li>
+		 * </ul>
+		 * @author Piotr Maselkowski <pmaselkowski at gmail.com>
+		 * @since 1.0.2
+		 * @Target('field')
+		 * @var int Identifier of user in mock property
+		 */
+COMMENT;
 	}
 
 }

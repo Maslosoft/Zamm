@@ -23,7 +23,7 @@ class SingleCommand extends BaseCommand
 	{
 		parent::configure();
 		$this->setName("doc:make");
-		$this->setDescription("Convert single file");
+		$this->setDescription("Convert documentation");
 		$this->setHelp(<<<EOT
 The <info>doc:make</info> command convert one or more directories or files
 EOT
@@ -32,7 +32,8 @@ EOT
 
 	protected function execute(InputInterface $input, OutputInterface $output)
 	{
-		//...
+		$zamm = new \Maslosoft\Zamm\Zamm();
+		(new \Maslosoft\Zamm\File\Applier($input, $output))->apply();
 	}
 
 }

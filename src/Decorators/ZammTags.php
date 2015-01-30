@@ -17,8 +17,14 @@ use Maslosoft\Zamm\Meta\TagMeta;
  */
 class ZammTags extends RendererDecorator implements IRendererDecorator
 {
+
 	const Open = '<!-- ZAMM:';
 	const Close = ':ZAMM -->';
+
+	/**
+	 * Add ZAMM tags
+	 * @param string $docComment
+	 */
 	public function decorate(&$docComment)
 	{
 		$docComment = sprintf("%s\n%s\n%s", $this->open(), $docComment, $this->close());
@@ -33,4 +39,5 @@ class ZammTags extends RendererDecorator implements IRendererDecorator
 	{
 		return self::Close;
 	}
+
 }
