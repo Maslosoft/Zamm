@@ -12,7 +12,7 @@
 
 namespace Maslosoft\Zamm\Renderers;
 
-use Maslosoft\Extractors\IExtractor;
+use Maslosoft\Zamm\Extractors\IExtractor;
 
 /**
  * BaseRenderer

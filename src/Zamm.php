@@ -12,10 +12,10 @@
 
 namespace Maslosoft\Zamm;
 
-use Maslosoft\Extractors\AddendumExtractor;
-use Maslosoft\Extractors\IExtractor;
-use Maslosoft\Extractors\NullExtractor;
 use Maslosoft\Zamm\Decorators\StarRemover;
+use Maslosoft\Zamm\Extractors\AddendumExtractor;
+use Maslosoft\Zamm\Extractors\IExtractor;
+use Maslosoft\Zamm\Extractors\NullExtractor;
 use Maslosoft\Zamm\Renderers\ClassRenderer;
 use Maslosoft\Zamm\Renderers\IClassRenderer;
 use Maslosoft\Zamm\Renderers\IMethodRenderer;
@@ -31,6 +31,8 @@ use Maslosoft\Zamm\Renderers\PropertyRenderer;
  */
 class Zamm
 {
+
+	const Version = '1.0.0';
 
 	public $decorators = [
 		// All around decorators
@@ -73,26 +75,17 @@ class Zamm
 
 	public function init()
 	{
-		if(null === $className)
-		{
-			$extractor = NullExtractor::class;
-		}
-		else
-		{
-			$extractor = $this->extractor;
-		}
-		$this->setExtractor(new $extractor());
-		$this->_extractor->setClassName($className);
+		
 	}
 
 	public function method($name)
 	{
-		return new MethodRenderer($this->_extractor, $name);
+		return new MethodRenderer($this->getExtractor(), $name);
 	}
 
 	public function property($name)
 	{
-		return new PropertyRenderer($this->_extractor, $name);
+		return new PropertyRenderer($this->getExtractor(), $name);
 	}
 
 	public function setExtractor(IExtractor $extractor)
@@ -102,6 +95,21 @@ class Zamm
 
 	public function getExtractor()
 	{
+		if (null === $this->_extractor)
+		{
+
+			if (!$this->_className)
+			{
+				$extractorClass = NullExtractor::class;
+			}
+			else
+			{
+				$extractorClass = $this->extractor;
+			}
+			$extractor = new $extractorClass();
+			$extractor->setClassName($this->_className);
+			$this->_extractor = $extractor;
+		}
 		return $this->_extractor;
 	}
 
@@ -111,7 +119,7 @@ class Zamm
 	 */
 	public function __toString()
 	{
-		return new ClassRenderer($this->_extractor);
+		return (string) new ClassRenderer($this->getExtractor());
 	}
 
 }

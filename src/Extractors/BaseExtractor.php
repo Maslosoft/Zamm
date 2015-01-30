@@ -9,26 +9,27 @@
 namespace Maslosoft\Zamm\Extractors;
 
 /**
- * Empty extractor
+ * BaseExtractor
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class NullExtractor extends BaseExtractor implements IExtractor
+abstract class BaseExtractor implements IExtractor
 {
 
-	public function getClass()
+	/**
+	 *
+	 * @var string
+	 */
+	private $className = '';
+
+	public function setClassName($name)
 	{
-		return '';
+		$this->className = $name;
 	}
 
-	public function getMethod($name)
+	public function getClassName()
 	{
-		return '';
-	}
-
-	public function getProperty($name)
-	{
-		return '';
+		return $this->className;
 	}
 
 }

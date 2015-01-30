@@ -12,8 +12,6 @@
 
 namespace Maslosoft\Zamm\Renderers;
 
-use Maslosoft\Extractors\IExtractor;
-
 /**
  * ClassRenderer
  *
@@ -25,7 +23,7 @@ class ClassRenderer extends BaseRenderer implements IRenderer, IClassRenderer
 
 	public function __toString()
 	{
-		
+		return '';
 	}
 
 }

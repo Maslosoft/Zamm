@@ -8,6 +8,8 @@
 
 namespace Maslosoft\Zamm\Application;
 
+use Maslosoft\Zamm\Commands\SingleCommand;
+use Maslosoft\Zamm\Zamm;
 use Symfony\Component\Console\Application as ConsoleApplication;
 
 /**
@@ -17,5 +19,38 @@ use Symfony\Component\Console\Application as ConsoleApplication;
  */
 class Application extends ConsoleApplication
 {
+
+	/**
+	 * Logo
+	 * font: slant
+	 */
+	const Logo = <<<LOGO
+ _____
+/__  /  ____ _____ ___  ____ ___
+  / /  / __ `/ __ `__ \/ __ `__ \
+ / /__/ /_/ / / / / / / / / / / /
+/____/\__,_/_/ /_/ /_/_/ /_/ /_/
+
+
+LOGO;
+
+	public function __construct()
+	{
+		parent::__construct('Zamm', Zamm::Version);
+	}
+
+	public function getHelp()
+	{
+		return self::Logo . parent::getHelp();
+	}
+
+	public function getDefaultCommands()
+	{
+		$commands = parent::getDefaultCommands();
+
+		$commands[] = new SingleCommand();
+
+		return $commands;
+	}
 
 }

@@ -10,18 +10,18 @@
  *
  */
 
-namespace Maslosoft\Extractors;
+namespace Maslosoft\Zamm\Extractors;
 
 use Maslosoft\Addendum\Addendum;
 
 /**
- * AddendumExtractor
+ * Extract doc comments from class
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class AddendumExtractor implements IExtractor
+class AddendumExtractor extends BaseExtractor implements IExtractor
 {
-	
+
 	public function __construct()
 	{
 		new Addendum();
@@ -40,11 +40,6 @@ class AddendumExtractor implements IExtractor
 	public function getProperty($name)
 	{
 		
-	}
-
-	public function setClassName($name)
-	{
-
 	}
 
 }

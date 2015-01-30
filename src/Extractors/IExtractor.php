@@ -10,7 +10,7 @@
  *
  */
 
-namespace Maslosoft\Extractors;
+namespace Maslosoft\Zamm\Extractors;
 
 /**
  *

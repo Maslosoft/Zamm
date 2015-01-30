@@ -2,6 +2,7 @@
 <?php
 
 use Maslosoft\Zamm\Application\Application;
+use Maslosoft\Zamm\Zamm;
 
 date_default_timezone_set('UTC');
 
@@ -11,5 +12,5 @@ if (file_exists(__DIR__.'/vendor/autoload.php')) {
     require_once __DIR__ . '/../../autoload.php';
 }
 
-$app = new Application();
+$app = new Application(new Zamm());
 $app->run();
