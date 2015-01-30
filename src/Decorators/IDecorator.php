@@ -19,5 +19,5 @@ namespace Maslosoft\Zamm\Decorators;
 interface IDecorator
 {
 
-	public function decorate($docComment);
+	public function decorate(&$docComment);
 }

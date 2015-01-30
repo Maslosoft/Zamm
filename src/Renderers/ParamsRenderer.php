@@ -17,7 +17,7 @@ namespace Maslosoft\Zamm\Renderers;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class ParamsRenderer extends BaseRenderer implements IRenderer
+class ParamsRenderer extends BaseRenderer implements IRenderer, IParamsRenderer
 {
 
 	public function __toString()

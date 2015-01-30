@@ -19,7 +19,7 @@ use Maslosoft\Extractors\IExtractor;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class ClassRenderer extends BaseRenderer implements IRenderer
+class ClassRenderer extends BaseRenderer implements IRenderer, IClassRenderer
 {
 
 

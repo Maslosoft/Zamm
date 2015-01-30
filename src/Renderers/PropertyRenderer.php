@@ -12,21 +12,22 @@
 
 namespace Maslosoft\Zamm\Renderers;
 
-use Maslosoft\Extractors\IExtractor;
-
 /**
  * PropertyRenderer
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class PropertyRenderer extends BaseRenderer implements IRenderer
+class PropertyRenderer extends BaseRenderer implements IRenderer, IPropertyRenderer
 {
 
-
+	public function type()
+	{
+		return new PropertyTypeRenderer($this->extractor, $this->name);
+	}
 
 	public function __toString()
 	{
-
+		
 	}
 
 }

@@ -4,6 +4,9 @@
     "require-dev": {
         "maslosoft/hedron": "*"
     },
+	"bin": [
+		"zamm"
+	],
     "license": "New BSD",
     "authors": [
         {

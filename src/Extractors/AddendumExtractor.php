@@ -12,6 +12,8 @@
 
 namespace Maslosoft\Extractors;
 
+use Maslosoft\Addendum\Addendum;
+
 /**
  * AddendumExtractor
  *
@@ -19,10 +21,10 @@ namespace Maslosoft\Extractors;
  */
 class AddendumExtractor implements IExtractor
 {
-
+	
 	public function __construct()
 	{
-		new \Maslosoft\Addendum\Addendum();
+		new Addendum();
 	}
 
 	public function getClass()

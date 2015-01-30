@@ -12,7 +12,7 @@
 
 namespace Maslosoft\Zamm\Renderers;
 
-use Maslosoft\Extractors\IExtractor;
+use Maslosoft\Zamm\Decorators\Decorator;
 
 /**
  * MethodRenderer
@@ -24,7 +24,9 @@ class MethodRenderer extends BaseRenderer implements IRenderer, IMethodRenderer
 
 	public function __toString()
 	{
-
+		$docComment = $this->extractor->getMethod($this->name);
+		(new Decorator())->decorate($docComment);
+		return $docComment;
 	}
 
 	public function params()
