@@ -1,6 +1,6 @@
 {
     "name": "maslosoft/zamm",
-    "description": "Zamm is a documentation module",
+    "description": "Zamm is a documentation tool",
     "require-dev": {
         "maslosoft/hedron": "*"
     },
@@ -13,8 +13,8 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "maslosoft/ilmatar-widgets": "*",
-        "maslosoft/ilmatar-components": "*"
+        "maslosoft/addendum": "~3.0",
+        "symfony/console": "~2.6"
     },
 	"autoload": {
 		"psr-4": {
