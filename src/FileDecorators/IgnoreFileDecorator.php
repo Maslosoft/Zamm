@@ -11,7 +11,8 @@ namespace Maslosoft\Zamm\FileDecorators;
 use Maslosoft\Zamm\Meta\PhpToken;
 
 /**
- * IgnoreFileDecorator
+ * Ignore `Ignore::open` / `Ignore::close` tags
+ * This ensures that ignored parts of php code will not be processed by PHP interpreter.
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */

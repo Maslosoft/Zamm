@@ -20,7 +20,10 @@ class MadeByFileDecorator implements IFileDecorator
 
 	public function decorate(&$docComment)
 	{
-		$docComment = implode("\n", [$docComment, Zamm::MadeBy]);
+		if(false === strstr($docComment, Zamm::MadeBy))
+		{
+			$docComment = implode("\n\n", [$docComment, Zamm::MadeBy]);
+		}
 	}
 
 }

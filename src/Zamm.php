@@ -21,6 +21,7 @@ use Maslosoft\Zamm\Extractors\IExtractor;
 use Maslosoft\Zamm\Extractors\NullExtractor;
 use Maslosoft\Zamm\FileDecorators\IFileDecorator;
 use Maslosoft\Zamm\FileDecorators\IgnoreFileDecorator;
+use Maslosoft\Zamm\FileDecorators\MadeByFileDecorator;
 use Maslosoft\Zamm\Interfaces\ISourceAccessor;
 use Maslosoft\Zamm\Outputs\FileOutput;
 use Maslosoft\Zamm\Outputs\IOutput;
@@ -78,6 +79,7 @@ class Zamm implements ISourceAccessor
 	public $fileDecorators = [
 		// All file decorators
 		IFileDecorator::class => [
+			MadeByFileDecorator::class
 		],
 		// PHP converter decorators
 		PhpConverter::class => [

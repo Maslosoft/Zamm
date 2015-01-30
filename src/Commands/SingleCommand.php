@@ -32,8 +32,8 @@ EOT
 
 	protected function execute(InputInterface $input, OutputInterface $output)
 	{
-		$zamm = new \Maslosoft\Zamm\Zamm();
-		(new \Maslosoft\Zamm\File\Applier($input, $output))->apply();
+//		$zamm = new \Maslosoft\Zamm\Zamm();
+//		(new \Maslosoft\Zamm\File\Applier($input, $output))->apply();
 	}
 
 }
