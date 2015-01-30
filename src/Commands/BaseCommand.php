@@ -23,8 +23,8 @@ abstract class BaseCommand extends Command
 	protected function configure()
 	{
 		$this->setDefinition([
-			new InputArgument('input', InputArgument::IS_ARRAY, 'Input file or folder'),
-			new InputOption('output', 'o', InputOption::VALUE_REQUIRED, 'Output file or folder, dafaults to asme location as input', null),
+			new InputArgument('input', InputArgument::IS_ARRAY, 'Input file or folder', ['docs']),
+			new InputOption('output', 'o', InputOption::VALUE_REQUIRED, 'Output folder', 'docs'),
 		]);
 	}
 
