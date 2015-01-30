@@ -1,0 +1,4 @@
+create FileDecorator interface:
+decorate($file);
+
+Decorators for Zamm::open()/Zamm::close()

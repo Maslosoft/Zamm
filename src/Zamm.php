@@ -25,7 +25,10 @@ use Maslosoft\Zamm\Renderers\MethodRenderer;
 use Maslosoft\Zamm\Renderers\PropertyRenderer;
 
 /**
- * PHP Doc extractor for code fragments
+ * Zamm: PHP Doc extractor for code fragments
+ * This class allows extracting code fragments into documentation.
+ * It is designed to be IDE friendly. It should autocomplete and automatically reflect code refactors if properly used.
+ * This documentation is also processed with Zamm.
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
@@ -72,7 +75,7 @@ class Zamm
 	{
 		$this->_className = $className;
 	}
-
+	
 	public function init()
 	{
 		
