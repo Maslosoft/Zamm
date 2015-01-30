@@ -8,13 +8,19 @@
 
 namespace Maslosoft\Zamm\FileDecorators;
 
-use Maslosoft\Zamm\Interfaces\IDecorator;
+use Maslosoft\Zamm\Zamm;
 
 /**
+ * Add a little information about documentation utility used here.
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IFileDecorator extends IDecorator
+class MadeByFileDecorator implements IFileDecorator
 {
+
+	public function decorate(&$docComment)
+	{
+		$docComment = implode("\n", [$docComment, Zamm::MadeBy]);
+	}
 
 }
