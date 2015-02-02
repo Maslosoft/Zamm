@@ -11,6 +11,7 @@ namespace Maslosoft\Zamm\Application;
 use Maslosoft\Zamm\Commands\SingleCommand;
 use Maslosoft\Zamm\Zamm;
 use Symfony\Component\Console\Application as ConsoleApplication;
+use Symfony\Component\Console\Command\Command;
 
 /**
  * Application
@@ -44,6 +45,11 @@ LOGO;
 		return self::Logo . parent::getHelp();
 	}
 
+    /**
+     * Gets the default commands that should always be available.
+     * 
+     * @return Command[] An array of default Command instances
+     */
 	public function getDefaultCommands()
 	{
 		$commands = parent::getDefaultCommands();
