@@ -40,4 +40,9 @@ class Source implements ISourceAccessor
 
 	}
 
+	public static function __callStatic($name, $arguments)
+	{
+		
+	}
+
 }

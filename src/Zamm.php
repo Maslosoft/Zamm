@@ -51,6 +51,19 @@ class Zamm implements ISourceAccessor
 	const DefaultInstanceId = 'zamm';
 
 	/**
+	 * Input for documentation
+	 * Array of folders and files to process.
+	 * @var string[]
+	 */
+	public $input = [
+		'docs'
+	];
+
+	public $output = [
+
+	];
+
+	/**
 	 * Configuration of decorators.
 	 * This should be array with keys of renderer interface names and values of decorator classes.
 	 * @var string[][]
@@ -135,7 +148,7 @@ class Zamm implements ISourceAccessor
 	 * EmbeDi instance
 	 * @var EmbeDi
 	 */
-	private $_id = null;
+	private $_di = null;
 
 	public function __construct($className = null)
 	{

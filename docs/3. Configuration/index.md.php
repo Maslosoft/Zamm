@@ -26,4 +26,4 @@ Default values should suffice. These can also be configured in `.zamm.yml`.
 
 Configuration can also be stored within your project root in file `.zamm.yml` (dont forget dot at beginning).
 
-Configuration variables are same as properties of <?= $namer; ?> class.
+Configuration variables are same as properties of `<?= $namer; ?>` class.

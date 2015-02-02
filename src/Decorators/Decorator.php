@@ -38,7 +38,7 @@ class Decorator extends AbstractDecorator
 		$this->apply($zamm->decorators);
 	}
 
-	protected function init(IDecorator $decorator)
+	protected function init(IRendererDecorator $decorator)
 	{
 		$decorator->setRenderer($this->renderer);
 	}
