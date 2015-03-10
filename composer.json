@@ -1,27 +1,27 @@
 {
-    "name": "maslosoft/zamm",
-    "description": "Zamm is a documentation tool",
-    "require-dev": {
-        "maslosoft/hedron": "*"
-    },
+	"name": "maslosoft/zamm",
+	"description": "Zamm is a documentation tool",
+	"require-dev": {
+		"maslosoft/hedron": "*"
+	},
 	"bin": [
 		"zamm"
 	],
-    "license": "AGPL/Commercial",
-    "authors": [
-        {
-            "name": "Peter Maselkowski",
-            "email": "pmaselkowski@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "maslosoft/addendum": "~3.0",
-        "symfony/console": "~2.6",
-        "symfony/finder": "~2.6",
-        "maslosoft/embedi": "*",
-        "maslosoft/miniview": "*"
-    },
+	"license": "AGPL or Commercial",
+	"authors": [
+		{
+			"name": "Peter Maselkowski",
+			"email": "pmaselkowski@gmail.com"
+		}
+	],
+	"minimum-stability": "stable",
+	"require": {
+		"maslosoft/addendum": "~3.0",
+		"symfony/console": "~2.6",
+		"symfony/finder": "~2.6",
+		"maslosoft/embedi": "*",
+		"maslosoft/miniview": "*"
+	},
 	"autoload": {
 		"psr-4": {
 			"Maslosoft\\Zamm\\": "src"
