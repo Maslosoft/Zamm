@@ -37,7 +37,7 @@ LOGO;
 
 	public function __construct()
 	{
-		parent::__construct('Zamm', Zamm::Version);
+		parent::__construct('Zamm', require __DIR__ . '/../version.php');
 	}
 
 	public function getHelp()
