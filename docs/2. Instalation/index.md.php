@@ -1,13 +1,15 @@
 # Instalation
 
 To install via composer use following command:
-
-	composer install "maslosoft/zamm:*"
+```sh
+composer install "maslosoft/zamm:*"
+```
 	
 This will expose zamm command:
+```sh
+vendor/bin/zamm
+```
 
-	./vendor/bin/zamm
-	
 This might be in different location if you have [defined `bin-dir` or set `COMPOSER_BIN_DIR` environment variable][bin-dir]
 
 

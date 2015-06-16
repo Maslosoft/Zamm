@@ -19,9 +19,9 @@
 	],
 	"minimum-stability": "stable",
 	"require": {
-		"maslosoft/addendum": "~3.0",
-		"symfony/console": "~2.6",
-		"symfony/finder": "~2.6",
+		"maslosoft/addendum": "*",
+		"symfony/console": "~2",
+		"symfony/finder": "~2",
 		"maslosoft/embedi": "*",
 		"maslosoft/miniview": "*"
 	},

@@ -1,46 +1,49 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "02d627d1d4ed4d496112ea5ce323cb4b",
+    "hash": "366e8827704a1a6270cf1ed8b4d5ef55",
     "packages": [
         {
             "name": "maslosoft/addendum",
-            "version": "3.0.7",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Maslosoft/Addendum.git",
-                "reference": "9398c0cc64005a13b3f0752484a104fe86fc27c1"
+                "reference": "369fc50c83f26d2458e10e4226648e984462fcc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Maslosoft/Addendum/zipball/9398c0cc64005a13b3f0752484a104fe86fc27c1",
-                "reference": "9398c0cc64005a13b3f0752484a104fe86fc27c1",
+                "url": "https://api.github.com/repos/Maslosoft/Addendum/zipball/369fc50c83f26d2458e10e4226648e984462fcc3",
+                "reference": "369fc50c83f26d2458e10e4226648e984462fcc3",
                 "shasum": ""
             },
             "require": {
                 "maslosoft/embedi": "*",
+                "maslosoft/gazebo": "*",
+                "maslosoft/signals": "*",
                 "php": ">=5.5.0",
                 "psr/log": "~1.0"
             },
             "require-dev": {
-                "codeception/specify": "0.4.*",
-                "maslosoft/addendumtest": "dev-master"
+                "maslosoft/addendumtest": "dev-master",
+                "maslosoft/hedron": "*"
             },
             "suggest": {
                 "monolog/monolog": "Sends your logs to files, sockets, inboxes, databases and various web services"
             },
-            "type": "yii-extension",
+            "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Maslosoft\\Addendum\\": "src/"
+                    "Maslosoft\\Addendum\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "New BSD"
+                "AGPL",
+                "Commercial"
             ],
             "authors": [
                 {
@@ -50,33 +53,73 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Annotations for Yii Framework",
+            "description": "Easy to use php annotations",
             "keywords": [
                 "addendum",
                 "annotation",
                 "annotations",
-                "metadata",
-                "yii"
+                "metadata"
             ],
-            "time": "2015-01-21 11:49:46"
+            "time": "2015-06-16 10:25:39"
         },
         {
-            "name": "maslosoft/embedi",
-            "version": "0.0.9",
+            "name": "maslosoft/cli-shared",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Maslosoft/EmbeDi.git",
-                "reference": "d7a533cf447bbb762b0359db9278ed8b48ce5979"
+                "url": "https://github.com/Maslosoft/CLIShared.git",
+                "reference": "8b778ac21667d95a6032aec4c0e15d7e8cf43526"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Maslosoft/EmbeDi/zipball/d7a533cf447bbb762b0359db9278ed8b48ce5979",
-                "reference": "d7a533cf447bbb762b0359db9278ed8b48ce5979",
+                "url": "https://api.github.com/repos/Maslosoft/CLIShared/zipball/8b778ac21667d95a6032aec4c0e15d7e8cf43526",
+                "reference": "8b778ac21667d95a6032aec4c0e15d7e8cf43526",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/yaml": "^2.6"
+            },
+            "require-dev": {
+                "maslosoft/hedron": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Maslosoft\\Cli\\Shared\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL",
+                "Commercial"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Maselkowski",
+                    "email": "pmaselkowski@gmail.com"
+                }
+            ],
+            "description": "Shared CLI application components",
+            "time": "2015-06-16 07:06:28"
+        },
+        {
+            "name": "maslosoft/embedi",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Maslosoft/EmbeDi.git",
+                "reference": "d4be00bc8e74e19d5404e6942b0a95df8334daf7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Maslosoft/EmbeDi/zipball/d4be00bc8e74e19d5404e6942b0a95df8334daf7",
+                "reference": "d4be00bc8e74e19d5404e6942b0a95df8334daf7",
                 "shasum": ""
             },
             "require-dev": {
                 "maslosoft/embeditest": "dev-master",
-                "maslosoft/hedron": "~1"
+                "maslosoft/hedron": "~1",
+                "maslosoft/zamm": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -86,7 +129,8 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "New BSD"
+                "AGPL",
+                "Commercial"
             ],
             "authors": [
                 {
@@ -96,20 +140,63 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2015-01-20 16:35:31"
+            "description": "Embedded DI container",
+            "time": "2015-06-10 09:49:38"
         },
         {
-            "name": "maslosoft/miniview",
-            "version": "1.0.7",
+            "name": "maslosoft/gazebo",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Maslosoft/MiniView.git",
-                "reference": "5e26a602f3050b158fa3b45e884c9cb6e11521aa"
+                "url": "https://github.com/Maslosoft/Gazebo.git",
+                "reference": "9fa38e5f39e77de95b893bc607f58e1d63237e05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Maslosoft/MiniView/zipball/5e26a602f3050b158fa3b45e884c9cb6e11521aa",
-                "reference": "5e26a602f3050b158fa3b45e884c9cb6e11521aa",
+                "url": "https://api.github.com/repos/Maslosoft/Gazebo/zipball/9fa38e5f39e77de95b893bc607f58e1d63237e05",
+                "reference": "9fa38e5f39e77de95b893bc607f58e1d63237e05",
+                "shasum": ""
+            },
+            "require": {
+                "maslosoft/addendum": "*",
+                "maslosoft/embedi": "*"
+            },
+            "require-dev": {
+                "maslosoft/gazebotest": "dev-master",
+                "maslosoft/hedron": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Maslosoft\\Gazebo\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL",
+                "Commercial"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Maselkowski",
+                    "email": "pmaselkowski@gmail.com"
+                }
+            ],
+            "description": "Plugin container",
+            "time": "2015-05-05 08:41:04"
+        },
+        {
+            "name": "maslosoft/miniview",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Maslosoft/MiniView.git",
+                "reference": "690f41c969dd7d32c9a4b49c81e4cad5d79dd70a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Maslosoft/MiniView/zipball/690f41c969dd7d32c9a4b49c81e4cad5d79dd70a",
+                "reference": "690f41c969dd7d32c9a4b49c81e4cad5d79dd70a",
                 "shasum": ""
             },
             "require-dev": {
@@ -123,7 +210,8 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "New BSD"
+                "AGPL",
+                "Commercial"
             ],
             "authors": [
                 {
@@ -133,7 +221,64 @@
             ],
             "description": "Mini view is minimal template rendering library based on Yii controller renderer",
             "homepage": "http://maslosoft.com/miniview/",
-            "time": "2015-01-13 16:54:06"
+            "time": "2015-05-28 11:21:52"
+        },
+        {
+            "name": "maslosoft/signals",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Maslosoft/Signals.git",
+                "reference": "c0fe0ffe8b01bc82d492f36ea87564a37382ba5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Maslosoft/Signals/zipball/c0fe0ffe8b01bc82d492f36ea87564a37382ba5e",
+                "reference": "c0fe0ffe8b01bc82d492f36ea87564a37382ba5e",
+                "shasum": ""
+            },
+            "require": {
+                "maslosoft/addendum": "*",
+                "maslosoft/cli-shared": "*",
+                "maslosoft/embedi": "*",
+                "psr/log": "~1"
+            },
+            "require-dev": {
+                "maslosoft/hedron": "*",
+                "maslosoft/signalstest": "dev-master"
+            },
+            "bin": [
+                "signals"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Maslosoft\\Signals\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL",
+                "Commercial"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Maselkowski",
+                    "email": "pmaselkowski@gmail.com",
+                    "homepage": "http://maslosoft.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Wireless Cross-Component Communication",
+            "keywords": [
+                "event",
+                "events",
+                "signal",
+                "signals",
+                "slot",
+                "slots"
+            ],
+            "time": "2015-06-16 07:12:52"
         },
         {
             "name": "psr/log",
@@ -175,25 +320,25 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.6.3",
-            "target-dir": "Symfony/Component/Console",
+            "version": "v2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "6ac6491ff60c0e5a941db3ccdc75a07adbb61476"
+                "reference": "564398bc1f33faf92fc2ec86859983d30eb81806"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/6ac6491ff60c0e5a941db3ccdc75a07adbb61476",
-                "reference": "6ac6491ff60c0e5a941db3ccdc75a07adbb61476",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/564398bc1f33faf92fc2ec86859983d30eb81806",
+                "reference": "564398bc1f33faf92fc2ec86859983d30eb81806",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
             },
             "require-dev": {
                 "psr/log": "~1.0",
                 "symfony/event-dispatcher": "~2.1",
+                "symfony/phpunit-bridge": "~2.7",
                 "symfony/process": "~2.1"
             },
             "suggest": {
@@ -204,11 +349,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\Console\\": ""
                 }
             },
@@ -218,44 +363,46 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony Console Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-01-06 17:50:02"
+            "homepage": "https://symfony.com",
+            "time": "2015-06-10 15:30:22"
         },
         {
             "name": "symfony/finder",
-            "version": "v2.6.3",
-            "target-dir": "Symfony/Component/Finder",
+            "version": "v2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "16513333bca64186c01609961a2bb1b95b5e1355"
+                "reference": "c13a40d638aeede1e8400f8c956c7f9246c05f75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/16513333bca64186c01609961a2bb1b95b5e1355",
-                "reference": "16513333bca64186c01609961a2bb1b95b5e1355",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/c13a40d638aeede1e8400f8c956c7f9246c05f75",
+                "reference": "c13a40d638aeede1e8400f8c956c7f9246c05f75",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\Finder\\": ""
                 }
             },
@@ -265,20 +412,449 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony Finder Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-01-03 08:01:59"
+            "homepage": "https://symfony.com",
+            "time": "2015-06-04 20:11:48"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/9808e75c609a14f6db02f70fccf4ca4aab53c160",
+                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-06-10 15:30:22"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+        {
+            "name": "maslosoft/hedron",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Maslosoft/Hedron.git",
+                "reference": "e5fde0a4e917075282ed06d44fa40831fd313052"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Maslosoft/Hedron/zipball/e5fde0a4e917075282ed06d44fa40831fd313052",
+                "reference": "e5fde0a4e917075282ed06d44fa40831fd313052",
+                "shasum": ""
+            },
+            "require": {
+                "phpunit/php-code-coverage": "~2",
+                "symfony/console": "~2",
+                "symfony/finder": "~2",
+                "symfony/yaml": "~2",
+                "zordius/lightncandy": "0.18.*"
+            },
+            "bin": [
+                "hedron"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Maslosoft\\Hedron\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL",
+                "Commercial"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Maselkowski",
+                    "email": "pmaselkowski@gmail.com"
+                }
+            ],
+            "description": "PHP source code class header applier",
+            "homepage": "http://maslosoft.com/hedron/",
+            "time": "2015-03-19 11:05:06"
+        },
+        {
+            "name": "phpunit/php-code-coverage",
+            "version": "2.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
+                "reference": "be2286cb8c7e1773eded49d9719219e6f74f9e3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/be2286cb8c7e1773eded49d9719219e6f74f9e3e",
+                "reference": "be2286cb8c7e1773eded49d9719219e6f74f9e3e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpunit/php-file-iterator": "~1.3",
+                "phpunit/php-text-template": "~1.2",
+                "phpunit/php-token-stream": "~1.3",
+                "sebastian/environment": "~1.0",
+                "sebastian/version": "~1.0"
+            },
+            "require-dev": {
+                "ext-xdebug": ">=2.1.4",
+                "phpunit/phpunit": "~4"
+            },
+            "suggest": {
+                "ext-dom": "*",
+                "ext-xdebug": ">=2.2.1",
+                "ext-xmlwriter": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
+            "homepage": "https://github.com/sebastianbergmann/php-code-coverage",
+            "keywords": [
+                "coverage",
+                "testing",
+                "xunit"
+            ],
+            "time": "2015-06-09 13:05:42"
+        },
+        {
+            "name": "phpunit/php-file-iterator",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
+                "reference": "a923bb15680d0089e2316f7a4af8f437046e96bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/a923bb15680d0089e2316f7a4af8f437046e96bb",
+                "reference": "a923bb15680d0089e2316f7a4af8f437046e96bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "FilterIterator implementation that filters files based on a list of suffixes.",
+            "homepage": "https://github.com/sebastianbergmann/php-file-iterator/",
+            "keywords": [
+                "filesystem",
+                "iterator"
+            ],
+            "time": "2015-04-02 05:19:05"
+        },
+        {
+            "name": "phpunit/php-text-template",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-text-template.git",
+                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Text/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Simple template engine.",
+            "homepage": "https://github.com/sebastianbergmann/php-text-template/",
+            "keywords": [
+                "template"
+            ],
+            "time": "2014-01-30 17:20:04"
+        },
+        {
+            "name": "phpunit/php-token-stream",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-token-stream.git",
+                "reference": "db63be1159c81df649cd0260e30249a586d4129e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/db63be1159c81df649cd0260e30249a586d4129e",
+                "reference": "db63be1159c81df649cd0260e30249a586d4129e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Wrapper around PHP's tokenizer extension.",
+            "homepage": "https://github.com/sebastianbergmann/php-token-stream/",
+            "keywords": [
+                "tokenizer"
+            ],
+            "time": "2015-06-12 07:34:24"
+        },
+        {
+            "name": "sebastian/environment",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/environment.git",
+                "reference": "5a8c7d31914337b69923db26c4221b81ff5a196e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/5a8c7d31914337b69923db26c4221b81ff5a196e",
+                "reference": "5a8c7d31914337b69923db26c4221b81ff5a196e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Provides functionality to handle HHVM/PHP environments",
+            "homepage": "http://www.github.com/sebastianbergmann/environment",
+            "keywords": [
+                "Xdebug",
+                "environment",
+                "hhvm"
+            ],
+            "time": "2015-01-01 10:01:08"
+        },
+        {
+            "name": "sebastian/version",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/version.git",
+                "reference": "ab931d46cd0d3204a91e1b9a40c4bc13032b58e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/ab931d46cd0d3204a91e1b9a40c4bc13032b58e4",
+                "reference": "ab931d46cd0d3204a91e1b9a40c4bc13032b58e4",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Library that helps with managing the version number of Git-hosted PHP projects",
+            "homepage": "https://github.com/sebastianbergmann/version",
+            "time": "2015-02-24 06:35:25"
+        },
+        {
+            "name": "zordius/lightncandy",
+            "version": "v0.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zordius/lightncandy.git",
+                "reference": "24be6909c37391f4648ce1fdf19036b11bd56d05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zordius/lightncandy/zipball/24be6909c37391f4648ce1fdf19036b11bd56d05",
+                "reference": "24be6909c37391f4648ce1fdf19036b11bd56d05",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.17"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/lightncandy.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zordius Chen",
+                    "email": "zordius@yahoo-inc.com"
+                }
+            ],
+            "description": "An extremely fast PHP implementation of handlebars ( http://handlebarsjs.com/ ) and mustache ( http://mustache.github.io/ ).",
+            "homepage": "https://github.com/zordius/lightncandy",
+            "keywords": [
+                "handlebars",
+                "logicless",
+                "mustache",
+                "php",
+                "template"
+            ],
+            "time": "2015-01-01 04:37:19"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
