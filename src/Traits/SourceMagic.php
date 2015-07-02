@@ -8,11 +8,11 @@
 
 namespace Maslosoft\Zamm\Traits;
 
-use Maslosoft\Zamm\Interfaces\ISourceAccessor;
+use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
 
 /**
  * GetSet
- * @see ISourceAccessor
+ * @see SourceAccessorInterface
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
 trait SourceMagic

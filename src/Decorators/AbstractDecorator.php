@@ -8,7 +8,7 @@
 
 namespace Maslosoft\Zamm\Decorators;
 
-use Maslosoft\Zamm\Interfaces\IDecorator;
+use Maslosoft\Zamm\Interfaces\DecoratorInterface;
 
 /**
  * Abstract class implementgin common decorator methods
@@ -20,7 +20,7 @@ abstract class AbstractDecorator
 
 	/**
 	 * Decorators
-	 * @var IDecorator[]
+	 * @var DecoratorInterface[]
 	 */
 	private $decorators = [];
 
@@ -56,13 +56,13 @@ abstract class AbstractDecorator
 			return false;
 		}
 		$decorator = new $className();
-		assert($decorator instanceof IDecorator);
+		assert($decorator instanceof DecoratorInterface);
 		$this->decorators[$className] = $decorator;
 
 		return true;
 	}
 
-	abstract protected function init(IDecorator $decorator);
+	abstract protected function init(DecoratorInterface $decorator);
 
 	/**
 	 * Decorated entity

@@ -22,7 +22,7 @@ use Maslosoft\Zamm\Extractors\NullExtractor;
 use Maslosoft\Zamm\FileDecorators\IFileDecorator;
 use Maslosoft\Zamm\FileDecorators\IgnoreFileDecorator;
 use Maslosoft\Zamm\FileDecorators\MadeByFileDecorator;
-use Maslosoft\Zamm\Interfaces\ISourceAccessor;
+use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
 use Maslosoft\Zamm\Outputs\FileOutput;
 use Maslosoft\Zamm\Outputs\IOutput;
 use Maslosoft\Zamm\Renderers\ClassRenderer;
@@ -41,7 +41,7 @@ use Maslosoft\Zamm\Renderers\PropertyRenderer;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class Zamm implements ISourceAccessor
+class Zamm implements SourceAccessorInterface
 {
 
 	use Traits\SourceMagic;

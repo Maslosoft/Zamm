@@ -10,7 +10,7 @@ namespace Maslosoft\Zamm\FileDecorators;
 
 use Maslosoft\Zamm\Converters\IConverter;
 use Maslosoft\Zamm\Decorators\AbstractDecorator;
-use Maslosoft\Zamm\Interfaces\IDecorator;
+use Maslosoft\Zamm\Interfaces\DecoratorInterface;
 use Maslosoft\Zamm\Zamm;
 
 /**
@@ -40,7 +40,7 @@ class FileDecorator extends AbstractDecorator
 		return $this->_converter;
 	}
 
-	protected function init(IDecorator $decorator)
+	protected function init(DecoratorInterface $decorator)
 	{
 		
 	}

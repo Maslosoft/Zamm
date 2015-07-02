@@ -8,7 +8,7 @@
 
 namespace Maslosoft\Zamm;
 
-use Maslosoft\Zamm\Interfaces\ISourceAccessor;
+use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
 
 /**
  * This simply return names of methods and properties.
@@ -17,7 +17,7 @@ use Maslosoft\Zamm\Interfaces\ISourceAccessor;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class Namer implements ISourceAccessor
+class Namer implements SourceAccessorInterface
 {
 
 	use Traits\SourceMagic;

@@ -12,7 +12,7 @@ namespace Maslosoft\Zamm\Interfaces;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface ISourceAccessor
+interface SourceAccessorInterface
 {
 
 	public function __construct($className = null);

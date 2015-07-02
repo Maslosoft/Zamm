@@ -16,7 +16,7 @@ namespace Maslosoft\Zamm\Interfaces;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IDecorator
+interface DecoratorInterface
 {
 
 	public function decorate(&$docComment);

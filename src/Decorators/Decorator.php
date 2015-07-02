@@ -8,7 +8,7 @@
 
 namespace Maslosoft\Zamm\Decorators;
 
-use Maslosoft\Zamm\Interfaces\IDecorator;
+use Maslosoft\Zamm\Interfaces\DecoratorInterface;
 use Maslosoft\Zamm\Renderers\IRenderer;
 use Maslosoft\Zamm\Zamm;
 

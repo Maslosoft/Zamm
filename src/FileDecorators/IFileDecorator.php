@@ -8,13 +8,13 @@
 
 namespace Maslosoft\Zamm\FileDecorators;
 
-use Maslosoft\Zamm\Interfaces\IDecorator;
+use Maslosoft\Zamm\Interfaces\DecoratorInterface;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IFileDecorator extends IDecorator
+interface IFileDecorator extends DecoratorInterface
 {
 
 }

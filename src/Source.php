@@ -12,7 +12,7 @@
 
 namespace Maslosoft\Zamm;
 
-use Maslosoft\Zamm\Interfaces\ISourceAccessor;
+use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
 
 /**
  * Source extractor for code fragments.
@@ -20,7 +20,7 @@ use Maslosoft\Zamm\Interfaces\ISourceAccessor;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class Source implements ISourceAccessor
+class Source implements SourceAccessorInterface
 {
 
 	use Traits\SourceMagic;

@@ -8,14 +8,14 @@
 
 namespace Maslosoft\Zamm\Decorators;
 
-use Maslosoft\Zamm\Interfaces\IDecorator;
+use Maslosoft\Zamm\Interfaces\DecoratorInterface;
 use Maslosoft\Zamm\Renderers\IRenderer;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IRendererDecorator extends IDecorator
+interface IRendererDecorator extends DecoratorInterface
 {
 
 	public function setRenderer(IRenderer $renderer);
