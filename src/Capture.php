@@ -32,17 +32,46 @@ namespace Maslosoft\Zamm;
 class Capture
 {
 
+	/**
+	 * Array of snippets
+	 * @var string[]
+	 */
 	private static $snippets = [];
+
+	/**
+	 * Id counter for auto id's
+	 * @var int
+	 */
 	private static $idCounter = 0;
+
+	/**
+	 * Whenever capture is opened
+	 * @var bool
+	 */
 	private static $isOpen = false;
+
+	/**
+	 * Currently capturing id
+	 * @var int|string
+	 */
 	private static $currentId = 0;
+
+	/**
+	 * Currently captured file
+	 * @var string
+	 */
 	private static $currentFile = '';
-	private static $currentLine = '';
+
+	/**
+	 * Currentlty captured starting line
+	 * @var int
+	 */
+	private static $currentLine = 0;
 
 	/**
 	 * Open PHP capturing block
 	 *
-	 * @param type $id
+	 * @param int|string $id
 	 */
 	public static function open($id = null)
 	{
@@ -79,7 +108,7 @@ class Capture
 
 	/**
 	 * Get last snipped or choosen by id.
-	 * @param type $id
+	 * @param int|string $id
 	 */
 	public static function get($id = null)
 	{
@@ -97,7 +126,7 @@ class Capture
 	/**
 	 * Get captured PHP block, additionally wrapped by markdown
 	 * fenced PHP code mark. This can be directly outputted to md file.
-	 * @param type $id
+	 * @param int|string $id
 	 */
 	public static function getMd($id = null)
 	{
@@ -107,7 +136,7 @@ class Capture
 	/**
 	 * Get captured PHP block, additionally wrapped by html pre and code tags.
 	 * This can be directly outputted to HTML file.
-	 * @param type $id
+	 * @param int|string $id
 	 */
 	public static function getHtml($id = null)
 	{
