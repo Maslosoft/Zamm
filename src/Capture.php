@@ -55,7 +55,7 @@ class Capture
 			$id = self::$idCounter++;
 		}
 		self::$isOpen = true;
-		$trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1);
+		$trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0];
 		self::$currentId = $id;
 		self::$currentFile = $trace['file'];
 		self::$currentLine = $trace['line'];
@@ -63,7 +63,6 @@ class Capture
 
 	/**
 	 * Close php capturing block
-	 *
 	 */
 	public static function close()
 	{
@@ -73,9 +72,9 @@ class Capture
 		}
 		self::$isOpen = false;
 		$lines = file(self::$currentFile);
-		$trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1);
-		$fragment = array_slice($lines, self::$currentLine, $trace['line'] - self::$currentLine);
-		return self::$snippets[self::$currentId] = implode(PHP_EOL, $fragment);
+		$trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0];
+		$fragment = array_slice($lines, self::$currentLine, $trace['line'] - self::$currentLine - 1);
+		return self::$snippets[self::$currentId] = implode('', $fragment);
 	}
 
 	/**
@@ -112,7 +111,7 @@ class Capture
 	 */
 	public static function getHtml($id = null)
 	{
-		return sprintf("<pre><code>\n%s\n</code></pre>", self::get($id));
+		return sprintf('<pre><code>%s</code></pre>', self::get($id));
 	}
 
 }
