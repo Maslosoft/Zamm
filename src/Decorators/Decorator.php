@@ -20,7 +20,6 @@ use Maslosoft\Zamm\Zamm;
 class Decorator extends AbstractDecorator
 {
 
-
 	/**
 	 * Renderer instance
 	 * @var IRenderer
@@ -38,8 +37,9 @@ class Decorator extends AbstractDecorator
 		$this->apply($zamm->decorators);
 	}
 
-	protected function init(IRendererDecorator $decorator)
+	protected function init(DecoratorInterface $decorator)
 	{
+		assert($decorator instanceof IRendererDecorator);
 		$decorator->setRenderer($this->renderer);
 	}
 

@@ -25,7 +25,14 @@ class DocMeta
 		;
 	}
 
-	public function getName();
+	public function getName()
+	{
 
-	public function getComment();
+	}
+
+	public function getComment()
+	{
+
+	}
+
 }

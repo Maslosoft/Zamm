@@ -18,9 +18,10 @@ use Maslosoft\Zamm\Meta\PhpToken;
  */
 class IgnoreFileDecorator implements IFileDecorator
 {
-	public function decorate($documentation)
+
+	public function decorate(&$docComment)
 	{
-		foreach(token_get_all($documentation) as $data)
+		foreach (token_get_all($docComment) as $data)
 		{
 			$token = new PhpToken($data);
 		}

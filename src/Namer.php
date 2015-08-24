@@ -28,7 +28,7 @@ class Namer implements SourceAccessorInterface
 	 */
 	private $_className = '';
 
-	public function __construct($className)
+	public function __construct($className = null)
 	{
 		$this->_className = $className;
 	}
@@ -52,6 +52,5 @@ class Namer implements SourceAccessorInterface
 	{
 		return $this->_className;
 	}
-
 
 }

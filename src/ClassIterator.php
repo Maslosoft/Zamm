@@ -2,6 +2,10 @@
 
 namespace Maslosoft\Zamm;
 
+use ArrayAccess;
+use Exception;
+use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
+
 /**
  * @property public
  * @property protected
@@ -49,6 +53,26 @@ class ClassIterator implements ArrayAccess
 		// a. regexp
 		// b. filter class
 		return $this;
+	}
+
+	public function offsetExists($offset)
+	{
+
+	}
+
+	public function offsetGet($offset)
+	{
+
+	}
+
+	public function offsetSet($offset, $value)
+	{
+
+	}
+
+	public function offsetUnset($offset)
+	{
+
 	}
 
 	// Array access implementation should return methods

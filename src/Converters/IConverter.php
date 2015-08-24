@@ -8,21 +8,24 @@
 
 namespace Maslosoft\Zamm\Converters;
 
+use Maslosoft\Zamm\Outputs\IOutput;
+
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
 interface IConverter
 {
+
 	/**
 	 *
 	 * @param string $documentation
 	 * @return IConverter
 	 */
 	public function input($documentation, $fileName);
-	
+
 	/**
 	 * @return string file name
 	 */
-	public function output();
+	public function output(IOutput $output);
 }
