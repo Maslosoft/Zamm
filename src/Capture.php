@@ -103,6 +103,26 @@ class Capture
 		$lines = file(self::$currentFile);
 		$trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0];
 		$fragment = array_slice($lines, self::$currentLine, $trace['line'] - self::$currentLine - 1);
+
+		// Trim empty tabs columns
+		$minTabs = 666;
+		foreach ($fragment as $line)
+		{
+			$matches = [];
+			preg_match("~^\t+~", $line, $matches);
+			if (!isset($matches[0]))
+			{
+				continue;
+			}
+			$minTabs = min([$minTabs, strlen($matches[0])]);
+		}
+		if ($minTabs < 666)
+		{
+			foreach ($fragment as &$line)
+			{
+				$line = preg_replace("~^\t{{$minTabs}}~", '', $line);
+			}
+		}
 		return self::$snippets[self::$currentId] = implode('', $fragment);
 	}
 
@@ -114,7 +134,7 @@ class Capture
 	{
 		if (self::$isOpen)
 		{
-			throw new Exception('Capture open, close block before getting snippet');
+			throw new Exception('Capture is open, close block before getting snippet');
 		}
 		if (null === $id)
 		{
