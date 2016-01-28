@@ -20,8 +20,8 @@
 	"minimum-stability": "stable",
 	"require": {
 		"maslosoft/addendum": "*",
-		"symfony/console": "~2",
-		"symfony/finder": "~2",
+		"symfony/console": "~3",
+		"symfony/finder": "~3",
 		"maslosoft/embedi": "*",
 		"maslosoft/miniview": "*"
 	},
