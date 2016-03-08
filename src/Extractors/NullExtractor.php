@@ -8,12 +8,14 @@
 
 namespace Maslosoft\Zamm\Extractors;
 
+use Maslosoft\Zamm\Interfaces\Extractors\ExtractorInterface;
+
 /**
  * Empty extractor
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class NullExtractor extends BaseExtractor implements IExtractor
+class NullExtractor extends BaseExtractor implements ExtractorInterface
 {
 
 	public function getClass()

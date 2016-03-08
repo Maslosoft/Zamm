@@ -8,12 +8,14 @@
 
 namespace Maslosoft\Zamm\Extractors;
 
+use Maslosoft\Zamm\Interfaces\Extractors\ExtractorInterface;
+
 /**
  * BaseExtractor
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-abstract class BaseExtractor implements IExtractor
+abstract class BaseExtractor implements ExtractorInterface
 {
 
 	/**

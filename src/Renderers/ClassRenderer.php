@@ -12,14 +12,16 @@
 
 namespace Maslosoft\Zamm\Renderers;
 
+use Maslosoft\Zamm\Interfaces\Renderers\ClassRendererInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\RendererInterface;
+
 /**
  * ClassRenderer
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class ClassRenderer extends BaseRenderer implements IRenderer, IClassRenderer
+class ClassRenderer extends BaseRenderer implements RendererInterface, ClassRendererInterface
 {
-
 
 	public function __toString()
 	{

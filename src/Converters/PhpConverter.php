@@ -10,15 +10,17 @@ namespace Maslosoft\Zamm\Converters;
 
 use Maslosoft\MiniView\MiniView;
 use Maslosoft\Zamm\FileDecorators\FileDecorator;
-use Maslosoft\Zamm\Outputs\IOutput;
+use Maslosoft\Zamm\Interfaces\ConverterInterface;
+use Maslosoft\Zamm\Interfaces\OutputInterface;
 
 /**
  * Convert PHP documentation file into md
  * 
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class PhpConverter implements IConverter
+class PhpConverter implements ConverterInterface
 {
+
 	/**
 	 *
 	 * @var MiniView
@@ -42,7 +44,6 @@ class PhpConverter implements IConverter
 	 * @var string
 	 */
 	private $_tempName;
-
 	private $_doc = '';
 
 	public function __construct()
@@ -60,7 +61,7 @@ class PhpConverter implements IConverter
 		$this->_doc = $this->view->render(basename($this->_tempName), [], true);
 	}
 
-	public function output(IOutput $output)
+	public function output(OutputInterface $output)
 	{
 		$outputName = preg_replace('~\.php~', '', $this->_fileName);
 		$output->output($this->_doc, $outputName);

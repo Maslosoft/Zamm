@@ -12,17 +12,20 @@
 
 namespace Maslosoft\Zamm\Renderers;
 
+use Maslosoft\Zamm\Interfaces\Renderers\ParamsRendererInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\RendererInterface;
+
 /**
  * ParamsRenderer
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class ParamsRenderer extends BaseRenderer implements IRenderer, IParamsRenderer
+class ParamsRenderer extends BaseRenderer implements RendererInterface, ParamsRendererInterface
 {
 
 	public function __toString()
 	{
-
+		
 	}
 
 }

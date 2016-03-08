@@ -8,8 +8,8 @@
 
 namespace Maslosoft\Zamm\FileDecorators;
 
-use Maslosoft\Zamm\Converters\IConverter;
 use Maslosoft\Zamm\Decorators\AbstractDecorator;
+use Maslosoft\Zamm\Interfaces\ConverterInterface;
 use Maslosoft\Zamm\Interfaces\DecoratorInterface;
 use Maslosoft\Zamm\Zamm;
 
@@ -23,11 +23,11 @@ class FileDecorator extends AbstractDecorator
 
 	/**
 	 * Converter
-	 * @var IConverter
+	 * @var ConverterInterface
 	 */
 	private $_converter = null;
 
-	public function __construct(IConverter $converter)
+	public function __construct(ConverterInterface $converter)
 	{
 		$this->_converter = $converter;
 		$zamm = new Zamm();

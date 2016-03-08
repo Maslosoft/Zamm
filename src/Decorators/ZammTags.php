@@ -8,6 +8,7 @@
 
 namespace Maslosoft\Zamm\Decorators;
 
+use Maslosoft\Zamm\Interfaces\Decorators\RendererDecoratorInterface;
 use Maslosoft\Zamm\Meta\TagMeta;
 
 /**
@@ -15,7 +16,7 @@ use Maslosoft\Zamm\Meta\TagMeta;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class ZammTags extends RendererDecorator implements IRendererDecorator
+class ZammTags extends RendererDecorator implements RendererDecoratorInterface
 {
 
 	const Open = '<!-- ZAMM:';

@@ -10,22 +10,13 @@
  *
  */
 
-namespace Maslosoft\Zamm\Renderers;
-
-use Maslosoft\Zamm\Extractors\IExtractor;
+namespace Maslosoft\Zamm\Interfaces\Renderers;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IRenderer
+interface MethodRendererInterface
 {
-
-	public function __construct(IExtractor $extractor, $name = null);
-
-	public function getClassName();
-
-	public function getName();
-
-	public function __toString();
+	public function params();
 }

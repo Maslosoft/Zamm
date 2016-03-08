@@ -6,13 +6,13 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Outputs;
+namespace Maslosoft\Zamm\Interfaces\Renderers;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IOutput
+interface ClassRendererInterface
 {
-	public function output($documentation, $fileName);
+	//put your code here
 }

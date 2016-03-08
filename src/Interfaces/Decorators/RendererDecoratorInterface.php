@@ -6,15 +6,19 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\FileDecorators;
+namespace Maslosoft\Zamm\Interfaces\Decorators;
 
 use Maslosoft\Zamm\Interfaces\DecoratorInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\RendererInterface;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IFileDecorator extends DecoratorInterface
+interface RendererDecoratorInterface extends DecoratorInterface
 {
 
+	public function setRenderer(RendererInterface $renderer);
+
+	public function getRenderer();
 }

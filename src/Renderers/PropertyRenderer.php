@@ -12,12 +12,15 @@
 
 namespace Maslosoft\Zamm\Renderers;
 
+use Maslosoft\Zamm\Interfaces\Renderers\PropertyRendererInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\RendererInterface;
+
 /**
  * PropertyRenderer
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class PropertyRenderer extends BaseRenderer implements IRenderer, IPropertyRenderer
+class PropertyRenderer extends BaseRenderer implements RendererInterface, PropertyRendererInterface
 {
 
 	public function type()

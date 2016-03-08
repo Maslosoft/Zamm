@@ -8,13 +8,16 @@
 
 namespace Maslosoft\Zamm\Outputs;
 
+use Maslosoft\Zamm\Interfaces\OutputInterface;
+
 /**
  * FileOutput
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class FileOutput implements IOutput
+class FileOutput implements OutputInterface
 {
+
 	public function output($documentation, $fileName)
 	{
 		file_put_contents($fileName, $documentation);

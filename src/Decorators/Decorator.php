@@ -9,7 +9,8 @@
 namespace Maslosoft\Zamm\Decorators;
 
 use Maslosoft\Zamm\Interfaces\DecoratorInterface;
-use Maslosoft\Zamm\Renderers\IRenderer;
+use Maslosoft\Zamm\Interfaces\Decorators\RendererDecoratorInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\RendererInterface;
 use Maslosoft\Zamm\Zamm;
 
 /**
@@ -22,15 +23,15 @@ class Decorator extends AbstractDecorator
 
 	/**
 	 * Renderer instance
-	 * @var IRenderer
+	 * @var RendererInterface
 	 */
 	private $renderer = null;
 
 	/**
 	 * Create decorator
-	 * @param IRenderer $renderer
+	 * @param RendererInterface $renderer
 	 */
-	public function __construct(IRenderer $renderer)
+	public function __construct(RendererInterface $renderer)
 	{
 		$zamm = new Zamm();
 		$this->renderer = $renderer;
@@ -39,7 +40,7 @@ class Decorator extends AbstractDecorator
 
 	protected function init(DecoratorInterface $decorator)
 	{
-		assert($decorator instanceof IRendererDecorator);
+		assert($decorator instanceof RendererDecoratorInterface);
 		$decorator->setRenderer($this->renderer);
 	}
 

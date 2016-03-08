@@ -13,23 +13,23 @@
 namespace Maslosoft\Zamm;
 
 use Maslosoft\EmbeDi\EmbeDi;
-use Maslosoft\Zamm\Converters\IConverter;
+use Maslosoft\Zamm\Interfaces\ConverterInterface;
 use Maslosoft\Zamm\Converters\PhpConverter;
 use Maslosoft\Zamm\Decorators\StarRemover;
 use Maslosoft\Zamm\Extractors\AddendumExtractor;
-use Maslosoft\Zamm\Extractors\IExtractor;
+use Maslosoft\Zamm\Interfaces\Extractors\ExtractorInterface;
 use Maslosoft\Zamm\Extractors\NullExtractor;
-use Maslosoft\Zamm\FileDecorators\IFileDecorator;
+use Maslosoft\Zamm\Interfaces\FileDecoratorInterface;
 use Maslosoft\Zamm\FileDecorators\IgnoreFileDecorator;
 use Maslosoft\Zamm\FileDecorators\MadeByFileDecorator;
 use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
 use Maslosoft\Zamm\Outputs\FileOutput;
-use Maslosoft\Zamm\Outputs\IOutput;
+use Maslosoft\Zamm\Interfaces\OutputInterface;
 use Maslosoft\Zamm\Renderers\ClassRenderer;
-use Maslosoft\Zamm\Renderers\IClassRenderer;
-use Maslosoft\Zamm\Renderers\IMethodRenderer;
-use Maslosoft\Zamm\Renderers\IPropertyRenderer;
-use Maslosoft\Zamm\Renderers\IRenderer;
+use Maslosoft\Zamm\Interfaces\Renderers\ClassRendererInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\MethodRendererInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\PropertyRendererInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\RendererInterface;
 use Maslosoft\Zamm\Renderers\MethodRenderer;
 use Maslosoft\Zamm\Renderers\PropertyRenderer;
 
@@ -74,17 +74,17 @@ class Zamm implements SourceAccessorInterface
 	 */
 	public $decorators = [
 		// All around decorators
-		IRenderer::class => [
+		RendererInterface::class => [
 			StarRemover::class
 		],
 		// Class decorators
-		IClassRenderer::class => [
+		ClassRendererInterface::class => [
 		],
 		// Property decorators
-		IPropertyRenderer::class => [
+		PropertyRendererInterface::class => [
 		],
 		// Method decorators
-		IMethodRenderer::class => [
+		MethodRendererInterface::class => [
 		],
 	];
 
@@ -95,7 +95,7 @@ class Zamm implements SourceAccessorInterface
 	 */
 	public $fileDecorators = [
 		// All file decorators
-		IFileDecorator::class => [
+		FileDecoratorInterface::class => [
 			MadeByFileDecorator::class
 		],
 		// PHP converter decorators
@@ -108,7 +108,7 @@ class Zamm implements SourceAccessorInterface
 	 * Converters
 	 * Array of class names of converters. These will be applied in order specified here, to all files.
 	 * All converters should implement `IConverter` interface.
-	 * @see IConverter
+	 * @see ConverterInterface
 	 * @var string[]
 	 */
 	public $converters = [
@@ -119,7 +119,7 @@ class Zamm implements SourceAccessorInterface
 	 * Outputs classes
 	 * Array of class names of outputs. These will be applied in order specified here, to all files.
 	 * All outputs should implement `IOutput` interface.
-	 * @see IOutput
+	 * @see OutputInterface
 	 * @var string[]
 	 */
 	public $outputs = [
@@ -131,14 +131,14 @@ class Zamm implements SourceAccessorInterface
 	 * This class will be used to extract source fragments. Defaults to `AddendumExtractor`.
 	 * It implements `IExtractor` interface.
 	 * @see AddendumExtractor
-	 * @see IExtractor
+	 * @see ExtractorInterface
 	 * @var string
 	 */
 	public $extractor = AddendumExtractor::class;
 
 	/**
 	 * Extractor instance
-	 * @var IExtractor
+	 * @var ExtractorInterface
 	 */
 	private $_extractor = null;
 
@@ -190,7 +190,7 @@ class Zamm implements SourceAccessorInterface
 		return new PropertyRenderer($this->getExtractor(), $name);
 	}
 
-	public function setExtractor(IExtractor $extractor)
+	public function setExtractor(ExtractorInterface $extractor)
 	{
 		$this->_extractor = $extractor;
 	}

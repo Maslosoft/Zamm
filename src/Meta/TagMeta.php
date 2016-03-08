@@ -9,7 +9,7 @@
 namespace Maslosoft\Zamm\Meta;
 
 use Maslosoft\Zamm\Decorators\ZammTags;
-use Maslosoft\Zamm\Renderers\IRenderer;
+use Maslosoft\Zamm\Interfaces\Renderers\RendererInterface;
 
 /**
  * TagMeta
@@ -39,9 +39,9 @@ class TagMeta
 
 	/**
 	 * Class constructor
-	 * @param IRenderer $renderer
+	 * @param RendererInterface $renderer
 	 */
-	public function __construct(IRenderer $renderer)
+	public function __construct(RendererInterface $renderer)
 	{
 		$this->interfaces = class_implements($renderer);
 		$this->className = $renderer->getClassName();

@@ -8,7 +8,7 @@
 
 namespace Maslosoft\Zamm\File;
 
-use Maslosoft\Zamm\Converters\IConverter;
+use Maslosoft\Zamm\Interfaces\ConverterInterface;
 use SplFileInfo;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo as SfFileInfo;
@@ -69,7 +69,7 @@ class Applier
 	{
 		foreach ($converters as $converter)
 		{
-			/* @var $converter IConverter */
+			/* @var $converter ConverterInterface */
 			$converter->input($src)->output($this->_output);
 		}
 	}

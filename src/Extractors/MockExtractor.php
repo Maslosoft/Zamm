@@ -8,12 +8,14 @@
 
 namespace Maslosoft\Zamm\Extractors;
 
+use Maslosoft\Zamm\Interfaces\Extractors\ExtractorInterface;
+
 /**
  * This extractor simulates extracting. It just return some predefined doc comments.
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class MockExtractor extends BaseExtractor implements IExtractor
+class MockExtractor extends BaseExtractor implements ExtractorInterface
 {
 
 	public function getClass()

@@ -10,13 +10,22 @@
  *
  */
 
-namespace Maslosoft\Zamm\Renderers;
+namespace Maslosoft\Zamm\Interfaces\Extractors;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IMethodRenderer
+interface ExtractorInterface
 {
-	public function params();
+
+	public function setClassName($name);
+
+	public function getClassName();
+
+	public function getClass();
+
+	public function getMethod($name);
+
+	public function getProperty($name);
 }

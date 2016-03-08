@@ -6,26 +6,26 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Converters;
+namespace Maslosoft\Zamm\Interfaces;
 
-use Maslosoft\Zamm\Outputs\IOutput;
+use Maslosoft\Zamm\Interfaces\OutputInterface;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IConverter
+interface ConverterInterface
 {
 
 	/**
 	 *
 	 * @param string $documentation
-	 * @return IConverter
+	 * @return ConverterInterface
 	 */
 	public function input($documentation, $fileName);
 
 	/**
 	 * @return string file name
 	 */
-	public function output(IOutput $output);
+	public function output(OutputInterface $output);
 }

@@ -6,13 +6,13 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Renderers;
+namespace Maslosoft\Zamm\Interfaces\Renderers;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IPropertyTypeRenderer
+interface PropertyTypeRendererInterface
 {
 	//put your code here
 }

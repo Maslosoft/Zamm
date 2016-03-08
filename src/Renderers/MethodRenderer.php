@@ -13,13 +13,15 @@
 namespace Maslosoft\Zamm\Renderers;
 
 use Maslosoft\Zamm\Decorators\Decorator;
+use Maslosoft\Zamm\Interfaces\Renderers\MethodRendererInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\RendererInterface;
 
 /**
  * MethodRenderer
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class MethodRenderer extends BaseRenderer implements IRenderer, IMethodRenderer
+class MethodRenderer extends BaseRenderer implements RendererInterface, MethodRendererInterface
 {
 
 	public function __toString()

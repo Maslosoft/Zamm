@@ -8,6 +8,7 @@
 
 namespace Maslosoft\Zamm\FileDecorators;
 
+use Maslosoft\Zamm\Interfaces\FileDecoratorInterface;
 use Maslosoft\Zamm\Meta\PhpToken;
 
 /**
@@ -16,7 +17,7 @@ use Maslosoft\Zamm\Meta\PhpToken;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class IgnoreFileDecorator implements IFileDecorator
+class IgnoreFileDecorator implements FileDecoratorInterface
 {
 
 	public function decorate(&$docComment)

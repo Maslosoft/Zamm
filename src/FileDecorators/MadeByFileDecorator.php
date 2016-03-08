@@ -8,6 +8,7 @@
 
 namespace Maslosoft\Zamm\FileDecorators;
 
+use Maslosoft\Zamm\Interfaces\FileDecoratorInterface;
 use Maslosoft\Zamm\Zamm;
 
 /**
@@ -15,12 +16,12 @@ use Maslosoft\Zamm\Zamm;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class MadeByFileDecorator implements IFileDecorator
+class MadeByFileDecorator implements FileDecoratorInterface
 {
 
 	public function decorate(&$docComment)
 	{
-		if(false === strstr($docComment, Zamm::MadeBy))
+		if (false === strstr($docComment, Zamm::MadeBy))
 		{
 			$docComment = implode("\n\n", [$docComment, Zamm::MadeBy]);
 		}

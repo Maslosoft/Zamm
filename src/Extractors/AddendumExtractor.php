@@ -13,13 +13,14 @@
 namespace Maslosoft\Zamm\Extractors;
 
 use Maslosoft\Addendum\Addendum;
+use Maslosoft\Zamm\Interfaces\Extractors\ExtractorInterface;
 
 /**
  * Extract doc comments from class
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class AddendumExtractor extends BaseExtractor implements IExtractor
+class AddendumExtractor extends BaseExtractor implements ExtractorInterface
 {
 
 	public function __construct()
@@ -34,7 +35,7 @@ class AddendumExtractor extends BaseExtractor implements IExtractor
 
 	public function getMethod($name)
 	{
-
+		
 	}
 
 	public function getProperty($name)

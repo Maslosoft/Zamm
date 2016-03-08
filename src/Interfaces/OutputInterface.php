@@ -6,13 +6,14 @@
  * and open the template in the editor.
  */
 
-namespace Maslosoft\Zamm\Renderers;
+namespace Maslosoft\Zamm\Interfaces;
 
 /**
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-interface IParamsRenderer
+interface OutputInterface
 {
-	//put your code here
+
+	public function output($documentation, $fileName);
 }

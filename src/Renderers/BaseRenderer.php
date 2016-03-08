@@ -12,19 +12,20 @@
 
 namespace Maslosoft\Zamm\Renderers;
 
-use Maslosoft\Zamm\Extractors\IExtractor;
+use Maslosoft\Zamm\Interfaces\Extractors\ExtractorInterface;
+use Maslosoft\Zamm\Interfaces\Renderers\RendererInterface;
 
 /**
  * BaseRenderer
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-abstract class BaseRenderer implements IRenderer
+abstract class BaseRenderer implements RendererInterface
 {
 
 	/**
 	 * Extractor
-	 * @var IExtractor
+	 * @var ExtractorInterface
 	 */
 	protected $extractor;
 
@@ -34,7 +35,7 @@ abstract class BaseRenderer implements IRenderer
 	 */
 	protected $name = '';
 
-	public function __construct(IExtractor $extractor, $name = null)
+	public function __construct(ExtractorInterface $extractor, $name = null)
 	{
 		$this->extractor = $extractor;
 		$this->name = $name;
