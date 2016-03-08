@@ -8,6 +8,10 @@
 
 namespace Maslosoft\Zamm;
 
+use Exception;
+use Maslosoft\Zamm\Helpers\Tabs;
+use Maslosoft\Zamm\Helpers\Wrapper;
+
 /**
  * Capture part of php code for later use.
  * This is intended for parts of code which should be evaluated,
@@ -104,31 +108,14 @@ class Capture
 		$trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0];
 		$fragment = array_slice($lines, self::$currentLine, $trace['line'] - self::$currentLine - 1);
 
-		// Trim empty tabs columns
-		$minTabs = 666;
-		foreach ($fragment as $line)
-		{
-			$matches = [];
-			preg_match("~^\t+~", $line, $matches);
-			if (!isset($matches[0]))
-			{
-				continue;
-			}
-			$minTabs = min([$minTabs, strlen($matches[0])]);
-		}
-		if ($minTabs < 666)
-		{
-			foreach ($fragment as &$line)
-			{
-				$line = preg_replace("~^\t{{$minTabs}}~", '', $line);
-			}
-		}
+		Tabs::trim($fragment);
 		return self::$snippets[self::$currentId] = implode('', $fragment);
 	}
 
 	/**
 	 * Get last snipped or choosen by id.
 	 * @param int|string $id
+	 * @return Wrapper
 	 */
 	public static function get($id = null)
 	{
@@ -140,7 +127,7 @@ class Capture
 		{
 			$id = self::$currentId;
 		}
-		return self::$snippets[$id];
+		return new Wrapper(self::$snippets[$id]);
 	}
 
 	/**
