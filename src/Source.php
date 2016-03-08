@@ -104,7 +104,6 @@ class Source implements SourceAccessorInterface
 			$start--;
 		}
 		$source = array_values($this->source);
-		$total = count($source);
 		$result = array_splice($source, $start, $end - $start);
 		Tabs::trim($result);
 		return implode('', $result);
