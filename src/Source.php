@@ -30,6 +30,35 @@ class Source implements SourceAccessorInterface
 		
 	}
 
+	/**
+	 * Should return source of method `$name` or static function
+	 */
+	public function __call($name, $arguments)
+	{
+
+	}
+
+	/**
+	 * Should return source of property `$name`
+	 */
+	public function __get($name)
+	{
+
+	}
+
+	/**
+	 * Should return source of working class
+	 */
+	public function __toString()
+	{
+
+	}
+
+	public static function __callStatic($name, $arguments)
+	{
+
+	}
+
 	public function method($name)
 	{
 		
@@ -40,9 +69,5 @@ class Source implements SourceAccessorInterface
 
 	}
 
-	public static function __callStatic($name, $arguments)
-	{
-		
-	}
 
 }
