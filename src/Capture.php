@@ -99,7 +99,8 @@ class Capture
 	}
 
 	/**
-	 * Close php capturing block
+	 * Close php capturing block and ge it wrapped
+	 * @return Wrapper
 	 */
 	public static function close()
 	{
@@ -113,7 +114,7 @@ class Capture
 		$fragment = array_slice($lines, self::$currentLine, $trace['line'] - self::$currentLine - 1);
 
 		Tabs::trim($fragment);
-		return self::$snippets[self::$currentId] = implode('', $fragment);
+		return new Wrapper(self::$snippets[self::$currentId] = implode('', $fragment));
 	}
 
 	/**

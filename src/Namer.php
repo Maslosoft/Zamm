@@ -12,7 +12,9 @@
 
 namespace Maslosoft\Zamm;
 
+use Maslosoft\Zamm\Helpers\InlineWrapper;
 use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
+use ReflectionClass;
 
 /**
  * This simply return names of methods and properties.
@@ -30,31 +32,35 @@ class Namer implements SourceAccessorInterface
 	 * Working class name
 	 * @var string
 	 */
-	private $_className = '';
+	private $className = '';
+	private $info = null;
 
 	public function __construct($className = null)
 	{
-		$this->_className = $className;
+		$this->className = $className;
+		$this->info = new ReflectionClass($this->className);
 	}
 
 	public function method($name)
 	{
-		return sprintf('%s::%s()', $this->_className, $name);
+		assert($this->info->hasMethod($name));
+		return new InlineWrapper(sprintf('%s::%s()', $this->className, $name));
 	}
 
 	public function property($name)
 	{
-		return sprintf('%s::%s', $this->_className, $name);
+		assert($this->info->hasProperty($name));
+		return new InlineWrapper(sprintf('%s::%s', $this->className, $name));
 	}
 
 	public static function __callStatic($name, $arguments)
 	{
-		return sprintf('%s', $name);
+		return new InlineWrapper(sprintf('%s', $name));
 	}
 
 	public function __toString()
 	{
-		return $this->_className;
+		return $this->className;
 	}
 
 }

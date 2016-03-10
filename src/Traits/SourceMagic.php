@@ -35,5 +35,4 @@ trait SourceMagic
 	abstract public function method($name);
 
 	abstract public function property($name);
-
 }
