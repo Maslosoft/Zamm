@@ -60,9 +60,7 @@ TEXT;
 		if ($this->isHtml)
 		{
 			return <<<TEXT
-<pre>
-$this->text
-</pre>
+<pre>$this->text</pre>
 TEXT;
 		}
 		return $this->text;
