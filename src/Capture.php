@@ -138,6 +138,7 @@ class Capture
 	/**
 	 * Get captured PHP block, additionally wrapped by markdown
 	 * fenced PHP code mark. This can be directly outputted to md file.
+	 * @deprecated use Wrapper instead: append ->md
 	 * @param int|string $id
 	 */
 	public static function getMd($id = null)
@@ -148,6 +149,7 @@ class Capture
 	/**
 	 * Get captured PHP block, additionally wrapped by html pre and code tags.
 	 * This can be directly outputted to HTML file.
+	 * @deprecated use Wrapper instead: append ->html
 	 * @param int|string $id
 	 */
 	public static function getHtml($id = null)

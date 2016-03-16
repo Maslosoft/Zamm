@@ -41,6 +41,10 @@ class Wrapper
 		return $this;
 	}
 
+	/**
+	 * Get code for HTML formatting.
+	 * @return Wrapper
+	 */
 	public function html()
 	{
 		$this->isHtml = true;
@@ -52,9 +56,11 @@ class Wrapper
 		if ($this->isMd)
 		{
 			return <<<TEXT
+			
 ```php
 $this->text
 ```
+
 TEXT;
 		}
 		if ($this->isHtml)
