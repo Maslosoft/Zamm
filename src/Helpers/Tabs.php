@@ -28,6 +28,10 @@ class Tabs
 			$string = true;
 			$lines = explode(PHP_EOL, $lines);
 		}
+		if(empty($lines))
+		{
+			return;
+		}
 		// Trim empty tabs columns
 		$minTabs = 666;
 		foreach ($lines as $line)
