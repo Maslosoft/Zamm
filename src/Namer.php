@@ -40,6 +40,18 @@ class Namer implements SourceAccessorInterface
 		$this->className = $className;
 		$this->info = new ReflectionClass($this->className);
 	}
+	
+	public function __get($name)
+	{
+		if($name == 'md' || $name == 'html')
+		{
+			if(!$this->info->hasProperty($name))
+			{
+				return (new InlineWrapper($this->className))->$name;
+			}
+		}
+		return parent::__get($name);
+	}
 
 	public function method($name)
 	{
