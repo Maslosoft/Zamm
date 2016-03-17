@@ -13,8 +13,6 @@
 namespace Maslosoft\Zamm;
 
 use Maslosoft\Zamm\Helpers\InlineWrapper;
-use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
-use ReflectionClass;
 
 /**
  * This simply return names of methods and properties, without class name or short class name.
@@ -23,54 +21,22 @@ use ReflectionClass;
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class ShortNamer implements SourceAccessorInterface
+class ShortNamer extends Namer
 {
 
 	use Traits\SourceMagic;
 
-	/**
-	 * Working class name
-	 * @var string
-	 */
-	private $className = '';
-	private $info = null;
-
-	public function __construct($className = null)
+	protected function _method($name)
 	{
-		$this->className = $className;
-		$this->info = new ReflectionClass($this->className);
+		return sprintf('%s()', $name);
 	}
 
-	public function __get($name)
+	public function _property($name)
 	{
-		if ($name === 'md' || $name === 'html' || $name === 'short')
-		{
-			if (!$this->info->hasProperty($name))
-			{
-				return (new InlineWrapper($this->info->getShortName()))->$name;
-			}
-		}
-		return $this->_get($name);
+		return sprintf('$%s', $name);
 	}
 
-	public function method($name)
-	{
-		assert($this->info->hasMethod($name));
-		return new InlineWrapper(sprintf('%s()', $name));
-	}
-
-	public function property($name)
-	{
-		assert($this->info->hasProperty($name));
-		return new InlineWrapper($name);
-	}
-
-	public static function __callStatic($name, $arguments)
-	{
-		return new InlineWrapper(sprintf('%s', $name));
-	}
-
-	public function __toString()
+	protected function _type()
 	{
 		return $this->info->getShortName();
 	}

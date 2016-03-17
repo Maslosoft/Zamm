@@ -32,22 +32,30 @@ class Namer implements SourceAccessorInterface
 	 * Working class name
 	 * @var string
 	 */
-	private $className = '';
-	private $info = null;
+	protected $className = '';
+	protected $info = null;
+
+	/**
+	 *
+	 * @var ApiLink
+	 */
+	protected $link = null;
 
 	public function __construct($className = null)
 	{
 		$this->className = $className;
 		$this->info = new ReflectionClass($this->className);
+		$this->link = new ApiUrl($className);
 	}
 
 	public function __get($name)
 	{
+		// This is to get class name formatted, without invoking property()
 		if ($name === 'md' || $name === 'html' || $name === 'short')
 		{
 			if (!$this->info->hasProperty($name))
 			{
-				return (new InlineWrapper($this->className))->$name;
+				return (new InlineWrapper($this->_type(), (string) $this->link))->$name;
 			}
 		}
 		return $this->_get($name);
@@ -56,13 +64,25 @@ class Namer implements SourceAccessorInterface
 	public function method($name)
 	{
 		assert($this->info->hasMethod($name));
-		return new InlineWrapper(sprintf('%s::%s()', $this->className, $name));
+		$link = $this->link->method($name, $name);
+		return new InlineWrapper($this->_method($name), $link);
+	}
+
+	protected function _method($name)
+	{
+		return sprintf('%s::%s()', $this->className, $name);
 	}
 
 	public function property($name)
 	{
 		assert($this->info->hasProperty($name));
-		return new InlineWrapper(sprintf('%s::%s', $this->className, $name));
+		$link = $this->link->property($name);
+		return new InlineWrapper($this->_property($name), $link);
+	}
+
+	protected function _property($name)
+	{
+		return sprintf('%s::%s', $this->className, $name);
 	}
 
 	public static function __callStatic($name, $arguments)
@@ -70,9 +90,15 @@ class Namer implements SourceAccessorInterface
 		return new InlineWrapper(sprintf('%s', $name));
 	}
 
-	public function __toString()
+	protected function _type()
 	{
 		return $this->className;
+	}
+
+	public function __toString()
+	{
+		$link = (string) $this->link;
+		return (string) new InlineWrapper($this->_type(), $link);
 	}
 
 }

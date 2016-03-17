@@ -9,11 +9,11 @@
 namespace Maslosoft\Zamm;
 
 /**
- * ApiLink
- *
+ * Api Url generator
+ * 
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class ApiLink implements Interfaces\SourceAccessorInterface
+class ApiUrl implements Interfaces\SourceAccessorInterface
 {
 
 	use Traits\SourceMagic;
@@ -26,23 +26,42 @@ class ApiLink implements Interfaces\SourceAccessorInterface
 		$this->dotName = str_replace('\\', '.', $className);
 	}
 
-	public function method($name, $text = '')
+	/**
+	 * Set root url of current project API. This can be relative or absolute url.
+	 *
+	 * Example:
+	 *
+	 * ```
+	 * ApiUrl::setRoot('/mangan/api);
+	 * ```
+	 *
+	 * @param string $apiUrl
+	 */
+	public static function setRoot($apiUrl)
 	{
-		// https://df.home/zamm/api/class-Maslosoft.Zamm.Decorators.AbstractDecorator.html#_decorate
-		$href = sprintf('%s/class-%s.html#_%s', self::$source, $this->dotName, $name);
-		return sprintf('<a href="%s">%s</a>', $href, $name);
+		self::$source = rtrim($apiUrl, '/');
 	}
 
-	public function property($name, $text = '')
+	public function method($name)
+	{
+		// https://df.home/zamm/api/class-Maslosoft.Zamm.Decorators.AbstractDecorator.html#_decorate
+		return sprintf('%s/class-%s.html#_%s', self::$source, $this->dotName, $name);
+	}
+
+	public function property($name)
 	{
 		// https://df.home/zamm/api/class-Maslosoft.Zamm.Zamm.html#$decorators
-		$href = sprintf('%s/class-%s.html#$%s', self::$source, $this->dotName, $name);
-		return sprintf('<a href="%s">%s</a>', $href, $name);
+		return sprintf('%s/class-%s.html#$%s', self::$source, $this->dotName, $name);
 	}
 
 	public static function __callStatic($name, $arguments)
 	{
 		
+	}
+
+	public function __toString()
+	{
+		return sprintf('%s/class-%s.html', self::$source, $this->dotName);
 	}
 
 }

@@ -22,12 +22,14 @@ class InlineWrapper
 {
 
 	private $text = '';
+	private $link = '';
 	private $isMd = false;
 	private $isHtml = false;
 
-	public function __construct($text)
+	public function __construct($text, $link = '')
 	{
 		$this->text = $text;
+		$this->link = $link;
 	}
 
 	public function __get($name)
@@ -51,13 +53,29 @@ class InlineWrapper
 	{
 		if ($this->isMd)
 		{
-			return "`$this->text`";
+			return $this->wrap("`$this->text`");
 		}
 		if ($this->isHtml)
 		{
-			return "<code>$this->text</code>";
+			return $this->wrap("<code>$this->text</code>");
 		}
-		return $this->text;
+		return $this->wrap($this->text);
+	}
+
+	private function wrap($text)
+	{
+		if ($this->link)
+		{
+			if ($this->isMd)
+			{
+				return sprintf('[%s](%s)', $text, $this->link);
+			}
+//			if ($this->isHtml)
+//			{
+			return sprintf('<a href="%s" class="api-link">%s</a>', $this->link, $text);
+//			}
+		}
+		return $text;
 	}
 
 }

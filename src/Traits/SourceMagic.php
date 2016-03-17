@@ -27,6 +27,7 @@ trait SourceMagic
 		return $this->_get($name);
 	}
 
+	// To allow override of __get
 	protected function _get($name)
 	{
 		return $this->property($name);
@@ -37,6 +38,7 @@ trait SourceMagic
 		return $this->_call($name);
 	}
 
+	// To allow override of __call
 	public function _call($name)
 	{
 		return $this->method($name);
