@@ -21,12 +21,16 @@ namespace Maslosoft\Zamm\Helpers;
 class Wrapper
 {
 
+	public $md;
+	public $html;
 	private $text = '';
 	private $isMd = false;
 	private $isHtml = false;
 
 	public function __construct($text)
 	{
+		unset($this->md);
+		unset($this->html);
 		$this->text = $text;
 	}
 

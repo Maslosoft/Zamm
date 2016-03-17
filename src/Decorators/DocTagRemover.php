@@ -12,10 +12,13 @@
 
 namespace Maslosoft\Zamm\Decorators;
 
+use Maslosoft\Zamm\Helpers\FenceHolder;
 use Maslosoft\Zamm\Interfaces\Decorators\RendererDecoratorInterface;
 
 /**
- * This removes annotations. This means everything starting with `@` and low case letter
+ * This removes doc block annotations. This means everything starting with `@` and low case letter.
+ *
+ * This will prevent doc blocks surrounded by fences (triple `)
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
@@ -24,7 +27,10 @@ class DocTagRemover extends RendererDecorator implements RendererDecoratorInterf
 
 	public function decorate(&$docComment)
 	{
-		
+		$holder = new FenceHolder();
+		$holder->hide($docComment);
+		$docComment = preg_replace('~^@[a-z].+$~m', '', $docComment);
+		$holder->reveal($docComment);
 	}
 
 }

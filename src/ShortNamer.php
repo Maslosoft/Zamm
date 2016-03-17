@@ -17,13 +17,13 @@ use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
 use ReflectionClass;
 
 /**
- * This simply return names of methods and properties.
+ * This simply return names of methods and properties, without class name or short class name.
  * This is helper for IDE's.
  * Use this together with @var type hint.
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
-class Namer implements SourceAccessorInterface
+class ShortNamer implements SourceAccessorInterface
 {
 
 	use Traits\SourceMagic;
@@ -47,7 +47,7 @@ class Namer implements SourceAccessorInterface
 		{
 			if (!$this->info->hasProperty($name))
 			{
-				return (new InlineWrapper($this->className))->$name;
+				return (new InlineWrapper($this->info->getShortName()))->$name;
 			}
 		}
 		return $this->_get($name);
@@ -56,13 +56,13 @@ class Namer implements SourceAccessorInterface
 	public function method($name)
 	{
 		assert($this->info->hasMethod($name));
-		return new InlineWrapper(sprintf('%s::%s()', $this->className, $name));
+		return new InlineWrapper(sprintf('%s()', $name));
 	}
 
 	public function property($name)
 	{
 		assert($this->info->hasProperty($name));
-		return new InlineWrapper(sprintf('%s::%s', $this->className, $name));
+		return new InlineWrapper($name);
 	}
 
 	public static function __callStatic($name, $arguments)
@@ -72,7 +72,7 @@ class Namer implements SourceAccessorInterface
 
 	public function __toString()
 	{
-		return $this->className;
+		return $this->info->getShortName();
 	}
 
 }

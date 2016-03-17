@@ -12,10 +12,13 @@
 
 namespace Maslosoft\Zamm\Decorators;
 
+use Maslosoft\Zamm\Helpers\FenceHolder;
 use Maslosoft\Zamm\Interfaces\Decorators\RendererDecoratorInterface;
 
 /**
- * This removes annotations. This means everything starting with `@` and capital letter
+ * This removes annotations. This means everything starting with `@` and capital letter.
+ *
+ * This will prevent annotations surrounded by fences (triple `).
  *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
@@ -24,7 +27,10 @@ class AnnotationRemover extends RendererDecorator implements RendererDecoratorIn
 
 	public function decorate(&$docComment)
 	{
-		
+		$holder = new FenceHolder();
+		$holder->hide($docComment);
+		$docComment = preg_replace('~^@[A-Z].+$~m', '', $docComment);
+		$holder->reveal($docComment);
 	}
 
 }

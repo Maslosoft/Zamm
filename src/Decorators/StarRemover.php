@@ -24,7 +24,19 @@ class StarRemover extends RendererDecorator implements RendererDecoratorInterfac
 
 	public function decorate(&$docComment)
 	{
-		
+		$docComment = trim($docComment);
+
+		// Remove leading slash
+		$docComment = preg_replace('~^/~ms', '', $docComment);
+
+		// Remove trailing slash
+		$docComment = preg_replace('~/$~ms', '', $docComment);
+
+		// Remove stars and one space
+		$docComment = preg_replace('~^\s*\**~ms', '', $docComment);
+
+		// Remove leading spaces. Other whitespace must be preserved.
+		$docComment = preg_replace('~^ {1}~ms', '', $docComment);
 	}
 
 }

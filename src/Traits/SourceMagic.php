@@ -24,10 +24,20 @@ trait SourceMagic
 
 	public function __get($name)
 	{
+		return $this->_get($name);
+	}
+
+	protected function _get($name)
+	{
 		return $this->property($name);
 	}
 
 	public function __call($name, $arguments)
+	{
+		return $this->_call($name);
+	}
+
+	public function _call($name)
 	{
 		return $this->method($name);
 	}
