@@ -37,7 +37,7 @@ class Namer implements SourceAccessorInterface
 
 	/**
 	 *
-	 * @var ApiLink
+	 * @var ApiUrl
 	 */
 	protected $link = null;
 
