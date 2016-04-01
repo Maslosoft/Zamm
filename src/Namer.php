@@ -64,7 +64,7 @@ class Namer implements SourceAccessorInterface
 	public function method($name)
 	{
 		assert($this->info->hasMethod($name));
-		$link = $this->link->method($name, $name);
+		$link = $this->link->method($name);
 		return new InlineWrapper($this->_method($name), $link);
 	}
 
