@@ -69,8 +69,9 @@ TEXT;
 		}
 		if ($this->isHtml)
 		{
+			$text = htmlspecialchars($this->text);
 			return <<<TEXT
-<pre>$this->text</pre>
+<pre>$text</pre>
 TEXT;
 		}
 		return $this->text;
