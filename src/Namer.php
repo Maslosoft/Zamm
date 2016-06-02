@@ -48,6 +48,15 @@ class Namer implements SourceAccessorInterface
 		$this->link = new ApiUrl($className);
 	}
 
+	/**
+	 * Set wrapper defaults
+	 * @return InlineWrapper
+	 */
+	public static function defaults()
+	{
+		return InlineWrapper::defaults();
+	}
+
 	public function __get($name)
 	{
 		// This is to get class name formatted, without invoking property()

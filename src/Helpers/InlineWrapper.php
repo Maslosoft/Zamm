@@ -21,15 +21,31 @@ namespace Maslosoft\Zamm\Helpers;
 class InlineWrapper
 {
 
+	protected $setup = false;
 	private $text = '';
 	private $link = '';
 	private $isMd = false;
 	private $isHtml = false;
+	private $isRaw = false;
+	private static $def = [];
 
-	public function __construct($text, $link = '')
+	public function __construct($text = '', $link = '')
 	{
 		$this->text = $text;
 		$this->link = $link;
+		foreach (self::$def as $flag => $value)
+		{
+			$this->$flag = $value;
+		}
+	}
+
+	public static function defaults()
+	{
+		// TODO Allow settings defaults
+		// See: https://github.com/Maslosoft/Zamm/issues/4
+		$wrapper = new static;
+		$wrapper->setup = true;
+		return $wrapper;
 	}
 
 	public function __get($name)
@@ -37,27 +53,45 @@ class InlineWrapper
 		return $this->$name();
 	}
 
-	public function md()
+	public function md($value = true)
 	{
-		$this->isMd = true;
+		$this->setFlag('isMd', $value);
 		return $this;
 	}
 
-	public function html()
+	public function html($value = true)
 	{
-		$this->isHtml = true;
+		$this->setFlag('isHtml', $value);
+		return $this;
+	}
+
+	/**
+	 * Strip leading $ from variables and trailing () from methods
+	 * @return InlineWrapper
+	 */
+	public function raw($value = true)
+	{
+		$this->setFlag('isRaw', $value);
 		return $this;
 	}
 
 	public function __toString()
 	{
+		if ($this->isRaw)
+		{
+			$text = trim($this->text, '$()');
+		}
+		else
+		{
+			$text = $this->text;
+		}
 		if ($this->isMd)
 		{
-			return $this->wrap("`$this->text`");
+			return $this->wrap("`$text`");
 		}
 		if ($this->isHtml)
 		{
-			return $this->wrap("<code>$this->text</code>");
+			return $this->wrap("<code>$text</code>");
 		}
 		return $this->wrap($this->text);
 	}
@@ -76,6 +110,15 @@ class InlineWrapper
 //			}
 		}
 		return $text;
+	}
+
+	private function setFlag($flag, $value = true)
+	{
+		$this->$flag = $value;
+		if ($this->setup)
+		{
+			self::$def[$flag] = $value;
+		}
 	}
 
 }
