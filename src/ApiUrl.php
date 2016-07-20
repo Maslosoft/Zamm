@@ -36,7 +36,7 @@ class ApiUrl implements SourceAccessorInterface
 		$search = self::normalize($className);
 		foreach (self::$sources as $url => $ns)
 		{
-			if (empty($ns))
+			if (empty($ns) || !is_string($url))
 			{
 				continue;
 			}
