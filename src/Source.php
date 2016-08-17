@@ -52,12 +52,12 @@ class Source implements SourceAccessorInterface
 	 */
 	public function __toString()
 	{
-
+		return $this->getTypeSource();
 	}
 
 	public static function __callStatic($name, $arguments)
 	{
-
+		
 	}
 
 	/**
@@ -124,15 +124,19 @@ class Source implements SourceAccessorInterface
 			case $property->isPrivate():
 				$name[] = 'public';
 				break;
-
 		}
-		if($property->isStatic())
+		if ($property->isStatic())
 		{
 			$name[] = 'static';
 		}
 		$name[] = sprintf('$%s', $property->name);
 
 		return implode(' ', $name) . ';';
+	}
+
+	private function getTypeSource()
+	{
+		return '';
 	}
 
 }

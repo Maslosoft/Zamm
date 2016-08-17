@@ -23,6 +23,7 @@ class Iterator
 	/**
 	 * Iterate over classes in same folder.
 	 * @param string $class
+	 * @return string[]
 	 */
 	public static function ns($class)
 	{

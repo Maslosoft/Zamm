@@ -99,7 +99,7 @@ class Capture
 	}
 
 	/**
-	 * Close php capturing block and ge it wrapped
+	 * Close php capturing block and get it wrapped
 	 * @return Wrapper
 	 */
 	public static function close()

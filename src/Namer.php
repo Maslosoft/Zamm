@@ -70,6 +70,11 @@ class Namer implements SourceAccessorInterface
 		return $this->_get($name);
 	}
 
+	/**
+	 *
+	 * @param string $name
+	 * @return InlineWrapper
+	 */
 	public function method($name)
 	{
 		assert($this->info->hasMethod($name));
@@ -82,6 +87,11 @@ class Namer implements SourceAccessorInterface
 		return sprintf('%s::%s()', $this->className, $name);
 	}
 
+	/**
+	 *
+	 * @param string $name
+	 * @return InlineWrapper
+	 */
 	public function property($name)
 	{
 		assert($this->info->hasProperty($name));

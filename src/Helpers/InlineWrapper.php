@@ -29,10 +29,11 @@ class InlineWrapper
 	private $isRaw = false;
 	private static $def = [];
 
-	public function __construct($text = '', $link = '')
+	public function __construct($text = '', $link = '', $title = '')
 	{
 		$this->text = $text;
 		$this->link = $link;
+		$this->title = $title;
 		foreach (self::$def as $flag => $value)
 		{
 			$this->$flag = $value;
@@ -106,7 +107,7 @@ class InlineWrapper
 			}
 //			if ($this->isHtml)
 //			{
-			return sprintf('<a href="%s" class="api-link">%s</a>', $this->link, $text);
+			return sprintf('<a href="%s" class="api-link" title="%s">%s</a>', $this->link, $this->title, $text);
 //			}
 		}
 		return $text;
