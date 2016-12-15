@@ -14,6 +14,7 @@ namespace Maslosoft\Zamm;
 
 use Maslosoft\Zamm\Helpers\InlineWrapper;
 use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
+use Maslosoft\Zamm\Traits\SourceMagic;
 use ReflectionClass;
 
 /**
@@ -26,7 +27,7 @@ use ReflectionClass;
 class Namer implements SourceAccessorInterface
 {
 
-	use Traits\SourceMagic;
+	use SourceMagic;
 
 	/**
 	 * Working class name
@@ -64,7 +65,7 @@ class Namer implements SourceAccessorInterface
 		{
 			if (!$this->info->hasProperty($name))
 			{
-				return (new InlineWrapper($this->_type(), (string) $this->link))->$name;
+				return (new InlineWrapper($this->_type(), (string) $this->link, $this->getTitle()))->$name;
 			}
 		}
 		return $this->_get($name);
@@ -79,7 +80,7 @@ class Namer implements SourceAccessorInterface
 	{
 		assert($this->info->hasMethod($name));
 		$link = $this->link->method($name);
-		return new InlineWrapper($this->_method($name), $link);
+		return new InlineWrapper($this->_method($name), $link, $this->getTitle("$name()"));
 	}
 
 	protected function _method($name)
@@ -96,7 +97,7 @@ class Namer implements SourceAccessorInterface
 	{
 		assert($this->info->hasProperty($name));
 		$link = $this->link->property($name);
-		return new InlineWrapper($this->_property($name), $link);
+		return new InlineWrapper($this->_property($name), $link, $this->getTitle($name));
 	}
 
 	protected function _property($name)
@@ -117,7 +118,16 @@ class Namer implements SourceAccessorInterface
 	public function __toString()
 	{
 		$link = (string) $this->link;
-		return (string) new InlineWrapper($this->_type(), $link);
+		return (string) new InlineWrapper($this->_type(), $link, $this->getTitle());
+	}
+
+	private function getTitle($name = '')
+	{
+		if (!empty($name))
+		{
+			return sprintf('%s::%s', $this->info->name, $name);
+		}
+		return $this->info->name;
 	}
 
 }

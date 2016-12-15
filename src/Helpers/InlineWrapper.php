@@ -103,12 +103,9 @@ class InlineWrapper
 		{
 			if ($this->isMd)
 			{
-				return sprintf('[%s](%s)', $text, $this->link);
+				return sprintf('[%s](%s "%s")', $text, $this->link, $this->title);
 			}
-//			if ($this->isHtml)
-//			{
 			return sprintf('<a href="%s" class="api-link" title="%s">%s</a>', $this->link, $this->title, $text);
-//			}
 		}
 		return $text;
 	}

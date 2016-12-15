@@ -29,5 +29,6 @@
 		"psr-4": {
 			"Maslosoft\\Zamm\\": "src"
 		}
-	}
+	},
+	"homepage": "https://maslosoft.com/zamm/"
 }

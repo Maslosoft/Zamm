@@ -12,6 +12,10 @@
 
 namespace Maslosoft\Zamm;
 
+use DirectoryIterator;
+use ReflectionClass;
+use ReflectionProperty;
+
 /**
  * Iterator
  *
@@ -27,11 +31,11 @@ class Iterator
 	 */
 	public static function ns($class)
 	{
-		$info = new \ReflectionClass($class);
+		$info = new ReflectionClass($class);
 		$path = dirname($info->getFileName());
 		$ns = $info->getNamespaceName();
 		$classNames = [];
-		foreach (new \DirectoryIterator($path) as $fileInfo)
+		foreach (new DirectoryIterator($path) as $fileInfo)
 		{
 			$name = $fileInfo->getFilename();
 
@@ -50,6 +54,23 @@ class Iterator
 		}
 		sort($classNames);
 		return $classNames;
+	}
+
+	/**
+	 * Iterate over *public* class methods
+	 * @param string $class
+	 * @return string[]
+	 */
+	public static function methods($class)
+	{
+		$info = new ReflectionClass($class);
+
+		$methods = [];
+		foreach ($info->getMethods(ReflectionProperty::IS_PUBLIC) as $method)
+		{
+			$methods[] = $method->name;
+		}
+		return $methods;
 	}
 
 }

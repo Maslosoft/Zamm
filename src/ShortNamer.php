@@ -12,7 +12,7 @@
 
 namespace Maslosoft\Zamm;
 
-use Maslosoft\Zamm\Helpers\InlineWrapper;
+use Maslosoft\Zamm\Traits\SourceMagic;
 
 /**
  * This simply return names of methods and properties, without class name or short class name.
@@ -24,7 +24,7 @@ use Maslosoft\Zamm\Helpers\InlineWrapper;
 class ShortNamer extends Namer
 {
 
-	use Traits\SourceMagic;
+	use SourceMagic;
 
 	protected function _method($name)
 	{
