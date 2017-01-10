@@ -9,17 +9,18 @@
 namespace Maslosoft\Zamm;
 
 use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
+use Maslosoft\Zamm\Traits\SourceMagic;
 use UnexpectedValueException;
 
 /**
  * Api Url generator
- * 
+ *
  * @author Piotr Maselkowski <pmaselkowski at gmail.com>
  */
 class ApiUrl implements SourceAccessorInterface
 {
 
-	use Traits\SourceMagic;
+	use SourceMagic;
 
 	private static $sources = [];
 	private $dotName = '';
@@ -32,24 +33,27 @@ class ApiUrl implements SourceAccessorInterface
 
 		// Many source found, search for proper api source
 		$url = '';
-//		var_dump(self::$sources);
-		$search = self::normalize($className);
-		foreach (self::$sources as $url => $ns)
-		{
-			if (empty($ns) || !is_string($url))
-			{
-				continue;
-			}
-			$pos = strpos($search, $ns);
 
-			if ($pos === false)
+		$search = self::normalize($className);
+		foreach (self::$sources as $url => $nss)
+		{
+			foreach ($nss as $ns)
 			{
-				continue;
-			}
-			if ($pos === 0)
-			{
-				$this->source = $url;
-				break;
+				if (empty($ns) || !is_string($url))
+				{
+					continue;
+				}
+				$pos = strpos($search, $ns);
+
+				if ($pos === false)
+				{
+					continue;
+				}
+				if ($pos === 0)
+				{
+					$this->source = $url;
+					break;
+				}
 			}
 		}
 
@@ -79,21 +83,29 @@ class ApiUrl implements SourceAccessorInterface
 	 * ApiUrl::setRoot('/mangan/api);
 	 * ```
 	 *
-	 * 
+	 *
 	 * @param string $apiUrl
 	 */
 	public static function setRoot($apiUrl)
 	{
 		if (is_string($apiUrl))
 		{
-			self::$sources[rtrim($apiUrl, '/')] = '';
+			self::$sources[rtrim($apiUrl, '/')] = [];
 		}
 		elseif (is_array($apiUrl))
 		{
 			$urls = [];
 			foreach ($apiUrl as $url => $ns)
 			{
-				$urls[rtrim($url, '/')] = self::normalize($ns);
+				if (!is_array($ns))
+				{
+					$ns = [$ns];
+				}
+				foreach ($ns as $nsIndex => $oneNs)
+				{
+					$ns[$nsIndex] = self::normalize($oneNs);
+				}
+				$urls[rtrim($url, '/')] = $ns;
 			}
 			self::$sources = array_merge(self::$sources, $urls);
 		}
@@ -117,7 +129,7 @@ class ApiUrl implements SourceAccessorInterface
 
 	public static function __callStatic($name, $arguments)
 	{
-		
+
 	}
 
 	public function __toString()
