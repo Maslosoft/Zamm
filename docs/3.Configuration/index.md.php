@@ -1,14 +1,16 @@
 <?php
 
-use Maslosoft\Zamm\Namer;
+use Maslosoft\Zamm\ShortNamer;
 use Maslosoft\Zamm\Zamm;
 ?>
 <?php
+ShortNamer::defaults()->md();
 $zamm = new Zamm(Zamm::class);
-$namer = new Namer(Zamm::class);
+$namer = new ShortNamer(Zamm::class);
+$doc = new Maslosoft\Zamm\DocBlock(Zamm::class);
 /* @var $namer Zamm */
 ?>
-
+<title>Configuration</title>
 # Zamm Configuration Guide
 
 ## Configuration variables
@@ -16,14 +18,16 @@ $namer = new Namer(Zamm::class);
 Following public properies are defined to configure behavior of Zamm generator.
 Default values should suffice. These can also be configured in `.zamm.yml`.
 
-###<?= $namer->decorators; ?>
+####<?= $namer->decorators; ?>
 <?= $zamm->property('decorators'); ?>
+<?= $doc->decorators; ?>
 
-###<?= $namer->extractor; ?>
+####<?= $namer->extractor; ?>
 <?= $zamm->property('extractor'); ?>
+<?= $doc->extractor; ?>
 
 ## .zamm.yml
 
 Configuration can also be stored within your project root in file `.zamm.yml` (dont forget dot at beginning).
 
-Configuration variables are same as properties of `<?= $namer; ?>` class.
+Configuration variables are same as properties of <?= $namer; ?> class.

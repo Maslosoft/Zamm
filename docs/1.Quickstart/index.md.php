@@ -11,7 +11,7 @@ $ignore = new Zamm(Ignore::class);
 $source = new Zamm(Source::class);
 /* @var $source Source */
 ?>
-
+<title>Quick Start</title>
 # Zamm Quick Start Guide
 
 ##<?= $zamm; ?>
@@ -27,7 +27,7 @@ Example:
 <?php
 Ignore::open();
 Ignore::open();
-$object = new Company\Project\SomeClass;
+$object = new Zamm;
 Ignore::close();
 Ignore::close();
 ?>
@@ -35,6 +35,6 @@ Ignore::close();
 This will result in plain php code in documentation:
 <?php
 Ignore::open();
-$object = new Company\Project\SomeClass;
+$object = new Zamm;
 Ignore::close();
 ?>

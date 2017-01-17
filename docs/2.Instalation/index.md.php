@@ -1,10 +1,11 @@
+<title>Instalation</title>
 # Instalation
 
 To install via composer use following command:
 ```sh
 composer install "maslosoft/zamm:*"
 ```
-	
+
 This will expose zamm command:
 ```sh
 vendor/bin/zamm

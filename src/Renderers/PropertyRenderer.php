@@ -30,7 +30,7 @@ class PropertyRenderer extends BaseRenderer implements RendererInterface, Proper
 
 	public function __toString()
 	{
-		
+		return '';
 	}
 
 }

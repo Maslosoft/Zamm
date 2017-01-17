@@ -11,7 +11,9 @@ use Maslosoft\Zamm\ShortNamer as Namer;
 /* @var $this Controller */
 /* @var $form ActiveForm */
 ?>
-
+<?php
+Namer::defaults()->md();
+?>
 <title>Capture</title>
 #Capture
 
@@ -25,9 +27,9 @@ echo sprintf('<em>Is your name %s?</em>', FF::create()->firstName);
 echo Capture::close()->md;
 ?>
 
-Above statement is execued, it's code captured and displayed formatted. This is achevied by <?= (new Namer(Capture::class))->md ?> class.
+Above statement is execued, it's code captured and displayed formatted. This is achevied by <?= (new Namer(Capture::class)) ?> class.
 
-Code used in example is wrapped with <?= (new Namer(Capture::class))->open()->md ?> and <?= (new Namer(Capture::class))->close()->md ?>
+Code used in example is wrapped with <?= (new Namer(Capture::class))->open() ?> and <?= (new Namer(Capture::class))->close() ?>
 functions. To get Markdown wrapped code there is appended <?= (new Namer(Wrapper::class))->md->md; ?> [wrapper indicator](../wrapper/).
 
 Whole example, including capture calls:
