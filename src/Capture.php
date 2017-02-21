@@ -154,7 +154,7 @@ class Capture
 	 */
 	public static function getHtml($id = null)
 	{
-		return sprintf('<pre><code>%s</code></pre>', self::get($id));
+		return sprintf('<pre class="php"><code>%s</code></pre>', self::get($id));
 	}
 
 }

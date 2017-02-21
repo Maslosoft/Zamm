@@ -71,7 +71,7 @@ TEXT;
 		{
 			$text = htmlspecialchars($this->text);
 			return <<<TEXT
-<pre>$text</pre>
+<pre class="php">$text</pre>
 TEXT;
 		}
 		return $this->text;
