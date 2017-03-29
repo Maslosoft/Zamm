@@ -16,7 +16,9 @@ use Exception;
 use Maslosoft\Zamm\Decorators\AnnotationRemover;
 use Maslosoft\Zamm\Decorators\DocTagRemover;
 use Maslosoft\Zamm\Decorators\StarRemover;
+use Maslosoft\Zamm\Helpers\DocWrapper;
 use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
+use Maslosoft\Zamm\Traits\SourceMagic;
 use ReflectionClass;
 
 /**
@@ -27,7 +29,7 @@ use ReflectionClass;
 class DocBlock implements SourceAccessorInterface
 {
 
-	use Traits\SourceMagic;
+	use SourceMagic;
 
 	/**
 	 *
@@ -40,12 +42,22 @@ class DocBlock implements SourceAccessorInterface
 		$this->info = new ReflectionClass($className);
 	}
 
+	/**
+	 * Get doc comment for method.
+	 * @param string $name
+	 * @return DocWrapper
+	 */
 	public function method($name)
 	{
 		assert($this->info->hasMethod($name));
 		return $this->decorate($this->info->getMethod($name)->getDocComment());
 	}
 
+	/**
+	 * Get doc comment for property.
+	 * @param string $name
+	 * @return DocWrapper
+	 */
 	public function property($name)
 	{
 		assert($this->info->hasProperty($name));
@@ -54,12 +66,12 @@ class DocBlock implements SourceAccessorInterface
 
 	public static function __callStatic($name, $arguments)
 	{
-		
+
 	}
 
 	public function __toString()
 	{
-		return $this->decorate($this->info->getDocComment());
+		return (string) $this->decorate($this->info->getDocComment());
 	}
 
 	private function decorate($docBlock)
@@ -81,7 +93,7 @@ class DocBlock implements SourceAccessorInterface
 		{
 			return $ex->getMessage();
 		}
-		return $docBlock;
+		return new DocWrapper($docBlock);
 	}
 
 }

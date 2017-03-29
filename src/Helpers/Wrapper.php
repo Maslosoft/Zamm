@@ -23,9 +23,9 @@ class Wrapper
 
 	public $md;
 	public $html;
-	private $text = '';
-	private $isMd = false;
-	private $isHtml = false;
+	protected $text = '';
+	protected $isMd = false;
+	protected $isHtml = false;
 
 	public function __construct($text)
 	{
@@ -60,7 +60,7 @@ class Wrapper
 		if ($this->isMd)
 		{
 			return <<<TEXT
-			
+
 ```php
 $this->text
 ```
