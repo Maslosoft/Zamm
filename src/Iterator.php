@@ -70,7 +70,26 @@ class Iterator
 		{
 			$methods[] = $method->name;
 		}
+		sort($methods);
 		return $methods;
+	}
+
+	/**
+	 * Iterate over *public* class properties
+	 * @param string $class
+	 * @return string[]
+	 */
+	public static function properties($class)
+	{
+		$info = new ReflectionClass($class);
+
+		$properties = [];
+		foreach ($info->getProperties(ReflectionProperty::IS_PUBLIC) as $property)
+		{
+			$properties[] = $property->name;
+		}
+		sort($properties);
+		return $properties;
 	}
 
 }
