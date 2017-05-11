@@ -37,13 +37,14 @@ class Tabs
 		foreach ($lines as $line)
 		{
 			$matches = [];
-			preg_match("~^\t+~", $line, $matches);
+			preg_match("~^\t*~", $line, $matches);
 			if (!isset($matches[0]))
 			{
 				continue;
 			}
 			$minTabs = min([$minTabs, strlen($matches[0])]);
 		}
+		
 		if ($minTabs < 666)
 		{
 			foreach ($lines as &$line)
