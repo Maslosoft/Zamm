@@ -25,43 +25,13 @@ class ApiUrl implements SourceAccessorInterface
 	private static $sources = [];
 	private $dotName = '';
 	private $source = '';
+	private $className = '';
 
 	public function __construct($className = null, $text = '')
 	{
 		$this->dotName = str_replace('\\', '.', $className);
 
-
-		// Many source found, search for proper api source
-		$url = '';
-
-		$search = self::normalize($className);
-		foreach (self::$sources as $url => $nss)
-		{
-			foreach ($nss as $ns)
-			{
-				if (empty($ns) || !is_string($url))
-				{
-					continue;
-				}
-				$pos = strpos($search, $ns);
-
-				if ($pos === false)
-				{
-					continue;
-				}
-				if ($pos === 0)
-				{
-					$this->source = $url;
-					break;
-				}
-			}
-		}
-
-		// Last resort url assigning
-		if (empty($this->source))
-		{
-			$this->source = $url;
-		}
+		$this->className = $className;
 	}
 
 	/**
@@ -118,13 +88,13 @@ class ApiUrl implements SourceAccessorInterface
 	public function method($name)
 	{
 		// https://df.home/zamm/api/class-Maslosoft.Zamm.Decorators.AbstractDecorator.html#_decorate
-		return sprintf('%s/class-%s.html#_%s', $this->source, $this->dotName, $name);
+		return sprintf('%s/class-%s.html#_%s', $this->resolveSource($this->resolveMethodClass($name)), $this->dotName, $name);
 	}
 
 	public function property($name)
 	{
 		// https://df.home/zamm/api/class-Maslosoft.Zamm.Zamm.html#$decorators
-		return sprintf('%s/class-%s.html#$%s', $this->source, $this->dotName, $name);
+		return sprintf('%s/class-%s.html#$%s', $this->resolveSource($this->resolvePropertyClass($name)), $this->dotName, $name);
 	}
 
 	public static function __callStatic($name, $arguments)
@@ -134,7 +104,63 @@ class ApiUrl implements SourceAccessorInterface
 
 	public function __toString()
 	{
-		return sprintf('%s/class-%s.html', $this->source, $this->dotName);
+		return sprintf('%s/class-%s.html', $this->resolveSource($this->className), $this->dotName);
+	}
+
+	/**
+	 * TODO: Resolve real class where property was defined
+	 * @param string $name Property name
+	 * @return string
+	 */
+	private function resolvePropertyClass($name)
+	{
+		return $this->className;
+	}
+
+	/**
+	 * TODO: Resolve real class where method was defined
+	 * @param string $name Method name
+	 * @return string
+	 */
+	private function resolveMethodClass($name)
+	{
+		return $this->className;
+	}
+
+	private function resolveSource($className)
+	{
+		// Many sources found, search for proper api source
+		$url = '';
+		$source = '';
+		$search = self::normalize($className);
+		foreach (self::$sources as $url => $nss)
+		{
+			foreach ($nss as $ns)
+			{
+				if (empty($ns) || !is_string($url))
+				{
+					continue;
+				}
+				$pos = strpos($search, $ns);
+
+				if ($pos === false)
+				{
+					continue;
+				}
+				if ($pos === 0)
+				{
+					$source = $url;
+					break;
+				}
+			}
+		}
+
+		// Last resort url assigning
+		if (empty($source))
+		{
+			$source = $url;
+		}
+		return $source;
 	}
 
 	/**
