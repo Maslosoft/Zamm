@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f6b2268-eb0f-4965-800b-c27d4c5897c2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" afterPath="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/configuration/index.md.php" afterPath="$PROJECT_DIR$/docs/configuration/index.md.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,16 +46,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SourceMagic.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Traits/SourceMagic.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Namer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Namer.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,11 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InlineWrapper.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InlineWrapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Helpers/InlineWrapper.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
               <caret line="114" column="103" lean-forward="false" selection-start-line="114" selection-start-column="103" selection-end-line="114" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.md.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/configuration/index.md.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -150,6 +150,7 @@
         <option value="$PROJECT_DIR$/docs/widgets/index.md.php" />
         <option value="$PROJECT_DIR$/docs/widgets/doc-nav-recursive/index.md.php" />
         <option value="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" />
+        <option value="$PROJECT_DIR$/docs/configuration/index.md.php" />
       </list>
     </option>
   </component>
@@ -310,12 +311,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501075302172</updated>
-      <workItem from="1501075303445" duration="4923000" />
+      <workItem from="1501075303445" duration="5069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4923000" />
+    <option name="totallyTimeSpent" value="5069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="0" width="1303" height="769" extended-state="6" />
@@ -363,14 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/configuration/index.md.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -525,6 +518,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="114" column="103" lean-forward="false" selection-start-line="114" selection-start-column="103" selection-end-line="114" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/configuration/index.md.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding />
         </state>
       </provider>

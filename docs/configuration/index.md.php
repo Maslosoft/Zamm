@@ -1,6 +1,7 @@
 <?php
 
 use Maslosoft\Zamm\ShortNamer;
+use Maslosoft\Zamm\Widgets\PropertiesDocs;
 use Maslosoft\Zamm\Zamm;
 ?>
 <?php
@@ -18,13 +19,7 @@ $doc = new Maslosoft\Zamm\DocBlock(Zamm::class);
 Following public properies are defined to configure behavior of Zamm generator.
 Default values should suffice. These can also be configured in `.zamm.yml`.
 
-####<?= $namer->decorators; ?>
-<?= $zamm->property('decorators'); ?>
-<?= $doc->decorators; ?>
-
-####<?= $namer->extractor; ?>
-<?= $zamm->property('extractor'); ?>
-<?= $doc->extractor; ?>
+<?= new PropertiesDocs(Zamm::class); ?>
 
 ## .zamm.yml
 
