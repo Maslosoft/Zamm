@@ -20,7 +20,7 @@ $namer = new ShortNamer(ShortNamer::class);
 <title>1. Quick Start</title>
 # Zamm Quick Start Guide
 
-### API Links and naming
+### API Links and [naming][namer]
 
 Zamm can generate links to api made by [apigen][apigen]. To use
 this feature add API roots for specified namespaces:
@@ -34,7 +34,7 @@ echo Capture::close()->md();
 ?>
 
 Then it can be used to create links to API of class,
-it's properties or methods using <?= $namer; ?>:
+it's properties or methods using <?= $namer; ?> ([more][namer]):
 
 <?php
 Capture::open();
@@ -57,3 +57,4 @@ as a code example. Thus resulting in valid PHP example code.
 
 [apigen]: https://github.com/ApiGen/ApiGen
 [capture]: ../capture/
+[namer]: ../namer/

@@ -20,6 +20,20 @@ To get class name, wrap it with namer and cast to string, optionally with [wrapp
 
 <?php
 Capture::open();
-echo (new Namer(Capture::class))->md;
+$name = (new Namer(Capture::class))->md;
+echo Capture::close()->md;
+?>
+
+This will result in fully qualified name of class:
+
+> <?= $name; ?>
+
+
+For easier usage it is possible to set output type globally, so that
+it is not required to add `->md` or `->html` to set proper output:
+
+<?php
+Capture::open();
+Namer::defaults()->md();
 echo Capture::close()->md;
 ?>
