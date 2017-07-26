@@ -54,11 +54,11 @@ class ApiUrl implements SourceAccessorInterface
 	 * used on classes outside of project:
 	 *
 	 * ```
-	 * ApiUrl::setRoot('/mangan/api);
+	 * ApiUrl::setRoot('/mangan/api');
 	 * ```
 	 *
 	 *
-	 * @param string $apiUrl
+	 * @param string|string[] $apiUrl
 	 */
 	public static function setRoot($apiUrl)
 	{

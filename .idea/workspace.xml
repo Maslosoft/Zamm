@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f6b2268-eb0f-4965-800b-c27d4c5897c2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/namer/index.md.php" afterPath="$PROJECT_DIR$/docs/namer/index.md.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/quick-start/index.md.php" afterPath="$PROJECT_DIR$/docs/quick-start/index.md.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ApiUrl.php" afterPath="$PROJECT_DIR$/src/ApiUrl.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.md.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.md.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/namer/index.md.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="478">
@@ -101,21 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiUrl.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApiUrl.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ApiUrl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-545">
-              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="properties-docs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Widgets/views/properties-docs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="374">
+              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/Widgets/DocNavRecursive.php" />
         <option value="$PROJECT_DIR$/docs/quick-start/index.md.php" />
         <option value="$PROJECT_DIR$/docs/namer/index.md.php" />
+        <option value="$PROJECT_DIR$/src/ApiUrl.php" />
       </list>
     </option>
   </component>
@@ -317,12 +307,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501075302172</updated>
-      <workItem from="1501075303445" duration="6768000" />
+      <workItem from="1501075303445" duration="7432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6768000" />
+    <option name="totallyTimeSpent" value="7432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="0" width="1303" height="769" extended-state="6" />
@@ -600,14 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApiUrl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-545">
-          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/quick-start/index.md.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -622,6 +604,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interfaces/SourceAccessorInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ApiUrl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding />
         </state>
       </provider>
