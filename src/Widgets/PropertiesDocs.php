@@ -12,7 +12,13 @@ use Maslosoft\MiniView\MiniView;
  */
 class PropertiesDocs extends AbstractWidget
 {
-
+	/**
+	 * Provide title to display above this widget's
+	 * generated table.
+	 *
+	 * @var string
+	 */
+	public $title = '';
 	private $class = null;
 
 	public function __construct($class)
@@ -22,7 +28,7 @@ class PropertiesDocs extends AbstractWidget
 
 	public function __toString()
 	{
-		return $this->render('properties-docs', ['class' => $this->class]);
+		return $this->render('properties-docs', ['class' => $this->class]) . "\n\n";
 	}
 
 }

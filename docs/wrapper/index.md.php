@@ -15,7 +15,7 @@ use Maslosoft\Zamm\Source;
 <?php
 $n = new ShortNamer(Wrapper::class);
 ?>
-<title>Wrapper</title>
+<title>6. Wrapper</title>
 #Wrapper
 
 Wrapper is a helper, which is returned by various Zamm tools, this ensures proper

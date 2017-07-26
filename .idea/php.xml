@@ -24,6 +24,8 @@
       <path value="$PROJECT_DIR$/vendor/zordius/lightncandy" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/maslosoft/staple" />
+      <path value="$PROJECT_DIR$/vendor/masterexploder/phpthumb" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

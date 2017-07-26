@@ -10,7 +10,7 @@ $namer = new ShortNamer(Zamm::class);
 $doc = new Maslosoft\Zamm\DocBlock(Zamm::class);
 /* @var $namer Zamm */
 ?>
-<title>Configuration</title>
+<title>3. Configuration</title>
 # Zamm Configuration Guide
 
 ## Configuration variables

@@ -78,7 +78,7 @@ class Namer implements SourceAccessorInterface
 	 */
 	public function method($name)
 	{
-		assert($this->info->hasMethod($name));
+		assert($this->info->hasMethod($name), "Tried to get non existing method: `$name` info of " . $this->_type());
 		$link = $this->link->method($name);
 		return new InlineWrapper($this->_method($name), $link, $this->getTitle("$name()"));
 	}
@@ -95,6 +95,17 @@ class Namer implements SourceAccessorInterface
 	 */
 	public function property($name)
 	{
+		// Workaround for __getting html link for type.
+		// Should be trapped in __get, but it doesn't always do.
+		if ($name === 'md' || $name === 'html' || $name === 'short')
+		{
+			if (!$this->info->hasProperty($name))
+			{
+				return (new InlineWrapper($this->_type(), (string) $this->link, $this->getTitle()))->$name;
+			}
+		}
+
+
 		assert($this->info->hasProperty($name));
 		$link = $this->link->property($name);
 		return new InlineWrapper($this->_property($name), $link, $this->getTitle($name));

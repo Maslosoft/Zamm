@@ -3,11 +3,19 @@
 use Maslosoft\Zamm\DocBlock;
 use Maslosoft\Zamm\Iterator;
 use Maslosoft\Zamm\ShortNamer;
+use Maslosoft\Zamm\Widgets\PropertiesDocs;
+
 ?>
 <?php
+/* @var $this PropertiesDocs */
 $namer = new ShortNamer($class);
 $doc = new DocBlock($class);
 ?>
+<?php if(!empty($this->title)):?>
+
+    <h3><?= $this->title; ?></h3>
+
+<?php endif;?>
 <table class="table">
 	<tr>
 		<th>

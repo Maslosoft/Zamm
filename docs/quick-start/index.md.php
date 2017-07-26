@@ -11,7 +11,7 @@ $ignore = new Zamm(Ignore::class);
 $source = new Zamm(Source::class);
 /* @var $source Source */
 ?>
-<title>Quick Start</title>
+<title>1. Quick Start</title>
 # Zamm Quick Start Guide
 
 ##<?= $zamm; ?>

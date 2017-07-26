@@ -14,7 +14,7 @@ use Maslosoft\Zamm\ShortNamer as Namer;
 <?php
 Namer::defaults()->md();
 ?>
-<title>Capture</title>
+<title>5. Capture</title>
 #Capture
 
 Capture allows to grab inline PHP from documentation and display it's source elsewhere.

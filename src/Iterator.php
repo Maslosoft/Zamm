@@ -13,6 +13,7 @@
 namespace Maslosoft\Zamm;
 
 use DirectoryIterator;
+use Maslosoft\Addendum\Utilities\ClassChecker;
 use ReflectionClass;
 use ReflectionProperty;
 
@@ -50,7 +51,12 @@ class Iterator
 			{
 				continue;
 			}
-			$classNames[] = sprintf('%s\%s', $ns, basename($name, '.php'));
+			$fqn = sprintf('%s\%s', $ns, basename($name, '.php'));
+			if (!ClassChecker::exists($fqn))
+			{
+				continue;
+			}
+			$classNames[] = $fqn;
 		}
 		sort($classNames);
 		return $classNames;

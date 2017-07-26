@@ -21,7 +21,7 @@ use Maslosoft\Zamm\ShortNamer;
 		?>
 		<tr>
 			<td>
-				<?= $namer; ?>
+				<?= $namer->html; ?>
 			</td>
 			<td>
 				<?= (new \Parsedown)->text((string) $doc); ?>

@@ -11,7 +11,7 @@ use Maslosoft\Zamm\Namer;
 /* @var $form ActiveForm */
 ?>
 
-<title>Namer</title>
+<title>4. Namer</title>
 #Namer
 
 Namer helps getting fully qualified names, which could be long, and tedious to repeatedly include in code.

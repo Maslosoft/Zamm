@@ -1,4 +1,4 @@
-<title>Instalation</title>
+<title>2. Instalation</title>
 # Instalation
 
 To install via composer use following command:

@@ -20,7 +20,7 @@ class NamespaceDocs extends AbstractWidget
 
 	public function __toString()
 	{
-		return $this->render('namespace-docs', ['class' => $this->class]);
+		return $this->render('namespace-docs', ['class' => $this->class]) . "\n\n";
 	}
 
 }

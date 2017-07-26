@@ -42,6 +42,8 @@
           <root url="file://$MODULE_DIR$/vendor/maslosoft/hedron" />
           <root url="file://$MODULE_DIR$/vendor/maslosoft/miniview" />
           <root url="file://$MODULE_DIR$/vendor/maslosoft/signals" />
+          <root url="file://$MODULE_DIR$/vendor/maslosoft/staple" />
+          <root url="file://$MODULE_DIR$/vendor/masterexploder/phpthumb" />
           <root url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
           <root url="file://$MODULE_DIR$/vendor/phpunit/php-file-iterator" />
           <root url="file://$MODULE_DIR$/vendor/phpunit/php-text-template" />
@@ -66,6 +68,8 @@
           <root url="file://$MODULE_DIR$/vendor/maslosoft/hedron" />
           <root url="file://$MODULE_DIR$/vendor/maslosoft/miniview" />
           <root url="file://$MODULE_DIR$/vendor/maslosoft/signals" />
+          <root url="file://$MODULE_DIR$/vendor/maslosoft/staple" />
+          <root url="file://$MODULE_DIR$/vendor/masterexploder/phpthumb" />
           <root url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
           <root url="file://$MODULE_DIR$/vendor/phpunit/php-file-iterator" />
           <root url="file://$MODULE_DIR$/vendor/phpunit/php-text-template" />

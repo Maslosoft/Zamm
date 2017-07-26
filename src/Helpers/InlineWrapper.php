@@ -40,10 +40,14 @@ class InlineWrapper
 		}
 	}
 
+	/**
+	 * Setup defaults
+	 *
+	 * @see https://github.com/Maslosoft/Zamm/issues/4
+	 * @return static
+	 */
 	public static function defaults()
 	{
-		// TODO Allow settings defaults
-		// See: https://github.com/Maslosoft/Zamm/issues/4
 		$wrapper = new static;
 		$wrapper->setup = true;
 		return $wrapper;

@@ -23,6 +23,7 @@
 		"maslosoft/addendum": "*",
 		"maslosoft/embedi": "*",
 		"maslosoft/miniview": "*",
+		"maslosoft/staple": "*",
 		"symfony/console": "~3",
 		"symfony/finder": "~3"
 	},
