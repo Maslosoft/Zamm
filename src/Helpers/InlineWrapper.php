@@ -22,6 +22,7 @@ class InlineWrapper
 {
 
 	protected $setup = false;
+	private $title = '';
 	private $text = '';
 	private $link = '';
 	private $isMd = false;

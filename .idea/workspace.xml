@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f6b2268-eb0f-4965-800b-c27d4c5897c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/widgets/doc-nav-recursive/index.md.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/widgets/index.md.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/widgets/namespace-docs/index.md.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/widgets/properties-docs/index.md.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Widgets/DocNavRecursive.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/1.Quickstart/index.md.php" afterPath="$PROJECT_DIR$/docs/quick-start/index.md.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/2.Instalation/index.md.php" afterPath="$PROJECT_DIR$/docs/instalation/index.md.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/3.Configuration/index.md.php" afterPath="$PROJECT_DIR$/docs/configuration/index.md.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zamm.iml" afterPath="$PROJECT_DIR$/.idea/zamm.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/capture/index.md.php" afterPath="$PROJECT_DIR$/docs/capture/index.md.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/namer/index.md.php" afterPath="$PROJECT_DIR$/docs/namer/index.md.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/wrapper/index.md.php" afterPath="$PROJECT_DIR$/docs/wrapper/index.md.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" afterPath="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Iterator.php" afterPath="$PROJECT_DIR$/src/Iterator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Namer.php" afterPath="$PROJECT_DIR$/src/Namer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Widgets/NamespaceDocs.php" afterPath="$PROJECT_DIR$/src/Widgets/NamespaceDocs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Widgets/PropertiesDocs.php" afterPath="$PROJECT_DIR$/src/Widgets/PropertiesDocs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Widgets/views/namespace-docs.php" afterPath="$PROJECT_DIR$/src/Widgets/views/namespace-docs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Widgets/views/properties-docs.php" afterPath="$PROJECT_DIR$/src/Widgets/views/properties-docs.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InlineWrapper.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InlineWrapper.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Helpers/InlineWrapper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+            <state relative-caret-position="230">
+              <caret line="114" column="103" lean-forward="false" selection-start-line="114" selection-start-column="103" selection-end-line="114" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -118,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.md.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.md.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/widgets/doc-nav-recursive/index.md.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="214">
@@ -142,6 +120,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>title</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -157,7 +140,6 @@
         <option value="$PROJECT_DIR$/docs/widgets/sub-nav-recursive/index.md.php" />
         <option value="$PROJECT_DIR$/src/Widgets/DocNavRecursive.php" />
         <option value="$PROJECT_DIR$/src/Iterator.php" />
-        <option value="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" />
         <option value="$PROJECT_DIR$/src/Widgets/views/namespace-docs.php" />
         <option value="$PROJECT_DIR$/src/Widgets/NamespaceDocs.php" />
         <option value="$PROJECT_DIR$/src/Namer.php" />
@@ -167,6 +149,7 @@
         <option value="$PROJECT_DIR$/src/Widgets/views/properties-docs.php" />
         <option value="$PROJECT_DIR$/docs/widgets/index.md.php" />
         <option value="$PROJECT_DIR$/docs/widgets/doc-nav-recursive/index.md.php" />
+        <option value="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" />
       </list>
     </option>
   </component>
@@ -327,12 +310,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501075302172</updated>
-      <workItem from="1501075303445" duration="4814000" />
+      <workItem from="1501075303445" duration="4923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4814000" />
+    <option name="totallyTimeSpent" value="4923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="0" width="1303" height="769" extended-state="6" />
@@ -448,14 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Helpers/InlineWrapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Traits/SourceMagic.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -542,6 +517,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Helpers/InlineWrapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="114" column="103" lean-forward="false" selection-start-line="114" selection-start-column="103" selection-end-line="114" selection-end-column="103" />
           <folding />
         </state>
       </provider>
