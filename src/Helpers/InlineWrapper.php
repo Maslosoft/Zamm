@@ -57,12 +57,14 @@ class InlineWrapper
 	public function md($value = true)
 	{
 		$this->setFlag('isMd', $value);
+		$this->setFlag('isHtml', !$value);
 		return $this;
 	}
 
 	public function html($value = true)
 	{
 		$this->setFlag('isHtml', $value);
+		$this->setFlag('isMd', !$value);
 		return $this;
 	}
 
