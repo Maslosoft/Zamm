@@ -1,9 +1,13 @@
 <?php
+
 /**
- * Created by PhpStorm.
- * User: peter
- * Date: 26.07.17
- * Time: 15:49
+ * This software package is licensed under `AGPL, Commercial` license[s].
+ *
+ * @package maslosoft/zamm
+ * @license AGPL, Commercial
+ *
+ * @copyright Copyright (c) Peter Maselkowski <pmaselkowski@gmail.com>
+ * @link https://maslosoft.com/zamm/
  */
 
 namespace Maslosoft\Zamm\Widgets;
@@ -11,6 +15,11 @@ namespace Maslosoft\Zamm\Widgets;
 
 use Maslosoft\Staple\Widgets\SubNavRecursive;
 
+/**
+ * This widget will display recursive tree of sub pages
+ * relative to current page.
+ * @package Maslosoft\Zamm\Widgets
+ */
 class DocNavRecursive extends SubNavRecursive
 {
 	public $title = '';

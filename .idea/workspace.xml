@@ -2,7 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f6b2268-eb0f-4965-800b-c27d4c5897c2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/configuration/index.md.php" afterPath="$PROJECT_DIR$/docs/configuration/index.md.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/zamm.iml" afterPath="$PROJECT_DIR$/.idea/zamm.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ApiUrl.php" afterPath="$PROJECT_DIR$/src/ApiUrl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application/Application.php" afterPath="$PROJECT_DIR$/src/Application/Application.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Capture.php" afterPath="$PROJECT_DIR$/src/Capture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClassIterator.php" afterPath="$PROJECT_DIR$/src/ClassIterator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/BaseCommand.php" afterPath="$PROJECT_DIR$/src/Commands/BaseCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Commands/SingleCommand.php" afterPath="$PROJECT_DIR$/src/Commands/SingleCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Converters/PhpConverter.php" afterPath="$PROJECT_DIR$/src/Converters/PhpConverter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Decorators/AbstractDecorator.php" afterPath="$PROJECT_DIR$/src/Decorators/AbstractDecorator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Decorators/AnnotationRemover.php" afterPath="$PROJECT_DIR$/src/Decorators/AnnotationRemover.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Decorators/Decorator.php" afterPath="$PROJECT_DIR$/src/Decorators/Decorator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Decorators/DocTagRemover.php" afterPath="$PROJECT_DIR$/src/Decorators/DocTagRemover.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Decorators/RendererDecorator.php" afterPath="$PROJECT_DIR$/src/Decorators/RendererDecorator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Decorators/StarRemover.php" afterPath="$PROJECT_DIR$/src/Decorators/StarRemover.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Decorators/ZammTags.php" afterPath="$PROJECT_DIR$/src/Decorators/ZammTags.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocBlock.php" afterPath="$PROJECT_DIR$/src/DocBlock.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Extractors/AddendumExtractor.php" afterPath="$PROJECT_DIR$/src/Extractors/AddendumExtractor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Extractors/BaseExtractor.php" afterPath="$PROJECT_DIR$/src/Extractors/BaseExtractor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Extractors/MockExtractor.php" afterPath="$PROJECT_DIR$/src/Extractors/MockExtractor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Extractors/NullExtractor.php" afterPath="$PROJECT_DIR$/src/Extractors/NullExtractor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/File/Applier.php" afterPath="$PROJECT_DIR$/src/File/Applier.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileDecorators/FileDecorator.php" afterPath="$PROJECT_DIR$/src/FileDecorators/FileDecorator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileDecorators/IgnoreFileDecorator.php" afterPath="$PROJECT_DIR$/src/FileDecorators/IgnoreFileDecorator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileDecorators/MadeByFileDecorator.php" afterPath="$PROJECT_DIR$/src/FileDecorators/MadeByFileDecorator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Helpers/DocWrapper.php" afterPath="$PROJECT_DIR$/src/Helpers/DocWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Helpers/FenceHolder.php" afterPath="$PROJECT_DIR$/src/Helpers/FenceHolder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" afterPath="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Helpers/Tabs.php" afterPath="$PROJECT_DIR$/src/Helpers/Tabs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Helpers/Wrapper.php" afterPath="$PROJECT_DIR$/src/Helpers/Wrapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ignore.php" afterPath="$PROJECT_DIR$/src/Ignore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/ConverterInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/ConverterInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/DecoratorInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/DecoratorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/Decorators/RendererDecoratorInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/Decorators/RendererDecoratorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/Extractors/ExtractorInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/Extractors/ExtractorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/FileDecoratorInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/FileDecoratorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/IteratorFilterInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/IteratorFilterInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/OutputInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/OutputInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/Renderers/ClassRendererInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/Renderers/ClassRendererInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/Renderers/MethodRendererInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/Renderers/MethodRendererInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/Renderers/ParamsRendererInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/Renderers/ParamsRendererInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/Renderers/PropertyRendererInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/Renderers/PropertyRendererInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/Renderers/PropertyTypeRendererInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/Renderers/PropertyTypeRendererInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/Renderers/RendererInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/Renderers/RendererInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interfaces/SourceAccessorInterface.php" afterPath="$PROJECT_DIR$/src/Interfaces/SourceAccessorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Iterator.php" afterPath="$PROJECT_DIR$/src/Iterator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Meta/DocMeta.php" afterPath="$PROJECT_DIR$/src/Meta/DocMeta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Meta/PhpToken.php" afterPath="$PROJECT_DIR$/src/Meta/PhpToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Meta/TagMeta.php" afterPath="$PROJECT_DIR$/src/Meta/TagMeta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Namer.php" afterPath="$PROJECT_DIR$/src/Namer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Outputs/FileOutput.php" afterPath="$PROJECT_DIR$/src/Outputs/FileOutput.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Outputs/StdOutOutput.php" afterPath="$PROJECT_DIR$/src/Outputs/StdOutOutput.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Renderers/BaseRenderer.php" afterPath="$PROJECT_DIR$/src/Renderers/BaseRenderer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Renderers/ClassRenderer.php" afterPath="$PROJECT_DIR$/src/Renderers/ClassRenderer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Renderers/MethodRenderer.php" afterPath="$PROJECT_DIR$/src/Renderers/MethodRenderer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Renderers/ParamsRenderer.php" afterPath="$PROJECT_DIR$/src/Renderers/ParamsRenderer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Renderers/PropertyRenderer.php" afterPath="$PROJECT_DIR$/src/Renderers/PropertyRenderer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Renderers/PropertyTypeRenderer.php" afterPath="$PROJECT_DIR$/src/Renderers/PropertyTypeRenderer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShortNamer.php" afterPath="$PROJECT_DIR$/src/ShortNamer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Source.php" afterPath="$PROJECT_DIR$/src/Source.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Traits/SourceMagic.php" afterPath="$PROJECT_DIR$/src/Traits/SourceMagic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Widgets/AbstractWidget.php" afterPath="$PROJECT_DIR$/src/Widgets/AbstractWidget.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Widgets/DocNavRecursive.php" afterPath="$PROJECT_DIR$/src/Widgets/DocNavRecursive.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Widgets/NamespaceDocs.php" afterPath="$PROJECT_DIR$/src/Widgets/NamespaceDocs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Widgets/PropertiesDocs.php" afterPath="$PROJECT_DIR$/src/Widgets/PropertiesDocs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Zamm.php" afterPath="$PROJECT_DIR$/src/Zamm.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/docs/widgets/properties-docs/index.md.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="302">
-              <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+              <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -36,37 +101,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShortNamer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ShortNamer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Namer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Namer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="97" column="55" lean-forward="false" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="InlineWrapper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Helpers/InlineWrapper.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
               <caret line="114" column="103" lean-forward="false" selection-start-line="114" selection-start-column="103" selection-end-line="114" selection-end-column="103" />
-              <folding />
+              <folding>
+                <marker date="1501080542824" expanded="false" signature="10:256" ph=" This software package is licensed under `AGPL, Commercial` license[s]. ..." />
+                <marker date="1501080542824" expanded="true" signature="298:474" ph=" Wrapper ..." />
+                <marker date="1501080542824" expanded="true" signature="759:912" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="875:909" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="918:1015" ph=" Setup defaults ..." />
+                <marker date="1501080542824" expanded="true" signature="1052:1128" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1159:1190" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1226:1319" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1357:1450" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1456:1549" ph=" Strip leading $ from variables and trailing () from methods ..." />
+                <marker date="1501080542824" expanded="true" signature="1587:1644" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1675:1955" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1698:1743" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1750:1782" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1801:1843" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1864:1917" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="1986:2240" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="2008:2221" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="2032:2113" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="2289:2379" ph="{...}" />
+                <marker date="1501080542824" expanded="true" signature="2337:2376" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.md.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.md.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/configuration/index.md.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="321">
@@ -76,12 +143,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AbstractWidget.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Widgets/AbstractWidget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocNavRecursive.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Widgets/DocNavRecursive.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PropertiesDocs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Widgets/PropertiesDocs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="474">
-              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-              <folding />
+              <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+              <folding>
+                <marker date="1501080542820" expanded="true" signature="332:485" ph=" This will display HTML table containing documentation ..." />
+                <marker date="1501080542820" expanded="true" signature="538:631" ph=" Provide title to display above this widget's ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,7 +200,7 @@
         <entry file="file://$PROJECT_DIR$/docs/widgets/index.md.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding>
                 <element signature="e#7#52#0#PHP" expanded="true" />
               </folding>
@@ -138,7 +228,6 @@
         <option value="$PROJECT_DIR$/docs/capture/index.md.php" />
         <option value="$PROJECT_DIR$/docs/wrapper/index.md.php" />
         <option value="$PROJECT_DIR$/docs/widgets/sub-nav-recursive/index.md.php" />
-        <option value="$PROJECT_DIR$/src/Widgets/DocNavRecursive.php" />
         <option value="$PROJECT_DIR$/src/Iterator.php" />
         <option value="$PROJECT_DIR$/src/Widgets/views/namespace-docs.php" />
         <option value="$PROJECT_DIR$/src/Widgets/NamespaceDocs.php" />
@@ -151,6 +240,8 @@
         <option value="$PROJECT_DIR$/docs/widgets/doc-nav-recursive/index.md.php" />
         <option value="$PROJECT_DIR$/src/Helpers/InlineWrapper.php" />
         <option value="$PROJECT_DIR$/docs/configuration/index.md.php" />
+        <option value="$PROJECT_DIR$/src/Widgets/AbstractWidget.php" />
+        <option value="$PROJECT_DIR$/src/Widgets/DocNavRecursive.php" />
       </list>
     </option>
   </component>
@@ -186,6 +277,7 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/maslosoft/staple" />
       <path value="$PROJECT_DIR$/vendor/masterexploder/phpthumb" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -220,51 +312,13 @@
             <path>
               <item name="zamm" type="b2602c69:ProjectViewProjectNode" />
               <item name="zamm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docs" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="zamm" type="b2602c69:ProjectViewProjectNode" />
               <item name="zamm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="capture" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zamm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zamm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="configuration" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zamm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zamm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="namer" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zamm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zamm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="widgets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zamm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zamm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="widgets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="doc-nav-recursive" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zamm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zamm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="widgets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="properties-docs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="zamm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zamm" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docs" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="wrapper" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Widgets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -311,12 +365,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501075302172</updated>
-      <workItem from="1501075303445" duration="5069000" />
+      <workItem from="1501075303445" duration="5379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5069000" />
+    <option name="totallyTimeSpent" value="5379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="0" width="1303" height="769" extended-state="6" />
@@ -408,14 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Widgets/DocNavRecursive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="50" column="59" lean-forward="false" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Iterator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -435,8 +481,14 @@
     <entry file="file://$PROJECT_DIR$/src/ShortNamer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding />
+          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <marker date="1501080542824" expanded="false" signature="10:256" ph=" This software package is licensed under `AGPL, Commercial` license[s]. ..." />
+            <marker date="1501080542824" expanded="true" signature="330:558" ph=" This simply return names of methods and properties, without class name or short class name. ..." />
+            <marker date="1501080542824" expanded="true" signature="648:687" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="722:760" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="789:833" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -444,7 +496,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="97" column="55" lean-forward="false" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
-          <folding />
+          <folding>
+            <marker date="1501080542812" expanded="false" signature="10:256" ph=" This software package is licensed under `AGPL, Commercial` license[s]. ..." />
+            <marker date="1501080542812" expanded="false" signature="291:443" ph="..." />
+            <marker date="1501080542812" expanded="true" signature="448:636" ph=" This simply return names of methods and properties. ..." />
+            <marker date="1501080542812" expanded="true" signature="712:754" ph=" Working class name ..." />
+            <marker date="1501080542812" expanded="true" signature="815:838" ph=" ..." />
+            <marker date="1501080542812" expanded="true" signature="914:1048" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="1054:1108" ph=" Set wrapper defaults ..." />
+            <marker date="1501080542812" expanded="true" signature="1145:1187" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="1218:1541" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="1354:1509" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="1399:1505" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="1547:1604" ph=" ..." />
+            <marker date="1501080542812" expanded="true" signature="1637:1879" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="1915:1976" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="1982:2039" ph=" ..." />
+            <marker date="1501080542812" expanded="true" signature="2074:2576" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="2249:2404" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="2294:2400" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="2614:2673" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="2730:2786" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="2815:2848" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="2879:2996" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="3036:3154" ph="{...}" />
+            <marker date="1501080542812" expanded="true" signature="3060:3123" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -475,7 +552,7 @@
     <entry file="file://$PROJECT_DIR$/docs/widgets/properties-docs/index.md.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
-          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -483,8 +560,11 @@
     <entry file="file://$PROJECT_DIR$/src/Widgets/PropertiesDocs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding />
+          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <marker date="1501080542820" expanded="true" signature="332:485" ph=" This will display HTML table containing documentation ..." />
+            <marker date="1501080542820" expanded="true" signature="538:631" ph=" Provide title to display above this widget's ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -499,7 +579,7 @@
     <entry file="file://$PROJECT_DIR$/docs/widgets/index.md.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
             <element signature="e#7#52#0#PHP" expanded="true" />
           </folding>
@@ -518,7 +598,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="114" column="103" lean-forward="false" selection-start-line="114" selection-start-column="103" selection-end-line="114" selection-end-column="103" />
-          <folding />
+          <folding>
+            <marker date="1501080542824" expanded="false" signature="10:256" ph=" This software package is licensed under `AGPL, Commercial` license[s]. ..." />
+            <marker date="1501080542824" expanded="true" signature="298:474" ph=" Wrapper ..." />
+            <marker date="1501080542824" expanded="true" signature="759:912" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="875:909" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="918:1015" ph=" Setup defaults ..." />
+            <marker date="1501080542824" expanded="true" signature="1052:1128" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1159:1190" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1226:1319" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1357:1450" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1456:1549" ph=" Strip leading $ from variables and trailing () from methods ..." />
+            <marker date="1501080542824" expanded="true" signature="1587:1644" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1675:1955" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1698:1743" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1750:1782" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1801:1843" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1864:1917" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="1986:2240" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="2008:2221" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="2032:2113" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="2289:2379" ph="{...}" />
+            <marker date="1501080542824" expanded="true" signature="2337:2376" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -526,6 +628,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Widgets/AbstractWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Widgets/DocNavRecursive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
           <folding />
         </state>
       </provider>
