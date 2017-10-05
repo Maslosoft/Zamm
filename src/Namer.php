@@ -44,6 +44,7 @@ class Namer implements SourceAccessorInterface
 
 	public function __construct($className = null)
 	{
+		assert(!empty($className), static::class . ' requires existing class name as a constructor parameter');
 		$this->className = $className;
 		$this->info = new ReflectionClass($this->className);
 		$this->link = new ApiUrl($className);

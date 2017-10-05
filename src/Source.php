@@ -67,6 +67,7 @@ class Source implements SourceAccessorInterface
 	 */
 	public function method($name)
 	{
+		assert($this->info->hasMethod($name), sprintf('Method `%s` does not exists on class `%s`', $name, $this->info->name));
 		$method = $this->info->getMethod($name);
 		$code = $this->getMethodSource($method->getStartLine(), $method->getEndLine());
 		$result = [];
@@ -84,6 +85,7 @@ class Source implements SourceAccessorInterface
 	 */
 	public function property($name)
 	{
+		assert($this->info->hasProperty($name), sprintf('Property `%s` does not exists on class `%s`', $name, $this->info->name));
 		$property = $this->info->getProperty($name);
 		$code = $this->getPropertySource($property);
 		$result = [];
