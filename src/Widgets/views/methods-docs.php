@@ -16,7 +16,12 @@ $doc = new DocBlock($class);
 
 <?php endif; ?>
 <p>
-	<a href="javascript://" onclick="jQuery('.method-is-getter').toggle();jQuery('.method-is-setter').toggle();">Toggle getters and setters</a>
+	<a
+		href="javascript://"
+		class="btn btn-link"
+		onclick="jQuery('.method-is-getter').toggle();jQuery('.method-is-setter').toggle();jQuery(this).toggleClass('btn-danger btn-link')">
+		Toggle getters and setters
+	</a>
 </p>
 <table class="table">
 	<tr>
