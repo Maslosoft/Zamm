@@ -14,19 +14,12 @@
       <path value="$PROJECT_DIR$/vendor/maslosoft/embedi" />
       <path value="$PROJECT_DIR$/vendor/maslosoft/hedron" />
       <path value="$PROJECT_DIR$/vendor/maslosoft/miniview" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/vendor/maslosoft/cli-shared" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/maslosoft/signals" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/zordius/lightncandy" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/maslosoft/staple" />
       <path value="$PROJECT_DIR$/vendor/masterexploder/phpthumb" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

@@ -19,13 +19,15 @@
 	],
 	"minimum-stability": "stable",
 	"require": {
-		"erusev/parsedown": "^1.6",
-		"maslosoft/addendum": "*",
-		"maslosoft/embedi": "*",
-		"maslosoft/miniview": "*",
-		"maslosoft/staple": "*",
-		"symfony/console": ">=2.7 <5.0",
-		"symfony/finder": ">=2.7 <5.0"
+	},
+	"suggest": {
+		"erusev/parsedown": "",
+		"maslosoft/addendum": "",
+		"maslosoft/embedi": "",
+		"maslosoft/miniview": "",
+		"maslosoft/staple": "",
+		"symfony/console": "",
+		"symfony/finder": ""
 	},
 	"autoload": {
 		"psr-4": {
