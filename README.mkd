@@ -1,7 +1,7 @@
 <!--header-->
 <!-- Auto generated do not modify between `header` and `/header` -->
 
-# <a href="https://maslosoft.com/zamm/">Maslosoft Zamm</a>
+# <a href="https://maslosoft.com/zamm/"><img src="https://maslosoft.com/zamm/zamm.svg" style="height:24px;" alt="Zamm Logo"></a> <a href="https://maslosoft.com/zamm/">Maslosoft Zamm</a>
 <a href="https://maslosoft.com/zamm/">_Zamm is a documentation tool_</a>
 
 <a href="https://packagist.org/packages/maslosoft/zamm" title="Latest Stable Version">
