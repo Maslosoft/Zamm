@@ -10,12 +10,52 @@
 <a href="https://packagist.org/packages/maslosoft/zamm" title="License">
 <img src="https://poser.pugx.org/maslosoft/zamm/license.svg" alt="License" style="height: 20px;"/>
 </a>
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Maslosoft/Zamm/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Maslosoft/Zamm/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/Maslosoft/Zamm/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Maslosoft/Zamm/?branch=master)
+<a href="https://scrutinizer-ci.com/g/Maslosoft/Zamm/?branch=master">
+	<img src="https://scrutinizer-ci.com/g/Maslosoft/Zamm/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"/>
+</a>
+<a href="https://scrutinizer-ci.com/g/Maslosoft/Zamm/?branch=master">
+	<img src="https://scrutinizer-ci.com/g/Maslosoft/Zamm/badges/coverage.png?b=master" alt="Code Coverage" />
+</a>
 
 ### Quick Install
 ```bash
 composer require maslosoft/zamm
 ```
+
+### Documentation
+
+<a href="https://maslosoft.com/zamm/docs/">Full Zamm Documentation</a>
+
+
+
+
+##Working examples
+
+It is quite important for examples or code snippets to actually work.
+When writing documentation in Markdown, Tex or other documentation tools,
+one could easy omit some important code fragments and create broken example.
+When using advanced IDE's like [NetBeans](http://netbeans.org/)
+[Eclipse](http://eclipse.org/) many early code problems are avoided.
+This also takes care of refactoring - which need to be also applied to documentation.
+It is also very important to have good php docs on classes.
+
+Basically it means that there are three aspects of coding which need to be in sync,
+while order of creating is somewhat like this:
+
+PHP Code <i class="fa fa-arrow-right"></i>
+PHP doc blocks <i class="fa fa-arrow-right"></i>
+[Documentation](docs/)
+
+It would be good to have as much as possible to be reused from code or doc blocks in documentation.
+
+###Documentation written in PHP
+
+To make documentation more consistent with Zamm, documentation can contain PHP code snippets, source
+code fragments or phpdoc comments extracted from source code. Then theese fragments can be rendered according to context,
+usually wrapped with pre tags, or Markdown fences.
+
+Zamm can [capture code fragments of inline php](docs/capture/), to allow in-place php execution while grabbing it's source at once. 
+Very usefull for [user interface demos](/df/docs/tabs/).
+
 
 <!--/header-->
