@@ -17,17 +17,17 @@ use Exception;
 use Maslosoft\Zamm\Interfaces\SourceAccessorInterface;
 
 /**
- * @property public
- * @property protected
- * @property private
+ * @property mixed public
+ * @property mixed protected
+ * @property mixed private
  * @property
  */
 class ClassIterator implements ArrayAccess
 {
 
-	const AccessPublic = 'public';
-	const AccessProtected = 'protected';
-	const AccessPrivate = 'private';
+	public const AccessPublic = 'public';
+	public const AccessProtected = 'protected';
+	public const AccessPrivate = 'private';
 
 	/**
 	 * Working class name
