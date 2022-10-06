@@ -1,9 +1,6 @@
 {
 	"name": "maslosoft/zamm",
 	"description": "Zamm is a documentation tool",
-	"require-dev": {
-		"maslosoft/hedron": "*"
-	},
 	"bin": [
 		"zamm"
 	],
@@ -19,6 +16,11 @@
 	],
 	"minimum-stability": "stable",
 	"require": {
+		"symfony/console": ">2 <=7"
+	}
+	,
+	"require-dev": {
+		"roave/security-advisories": "dev-latest"
 	},
 	"suggest": {
 		"erusev/parsedown": "",
@@ -34,5 +36,9 @@
 			"Maslosoft\\Zamm\\": "src"
 		}
 	},
-	"homepage": "https://maslosoft.com/zamm/"
+	"homepage": "https://maslosoft.com/zamm/",
+	"support": {
+		"docs": "https://maslosoft.com/zamm/docs/",
+		"issues": "https://github.com/Maslosoft/Zamm/issues"
+	}
 }
