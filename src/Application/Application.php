@@ -29,7 +29,7 @@ class Application extends ConsoleApplication
 	 * Logo
 	 * font: slant
 	 */
-	const Logo = <<<LOGO
+	public const Logo = <<<LOGO
  _____
 /__  /  ____ _____ ___  ____ ___
   / /  / __ `/ __ `__ \/ __ `__ \
@@ -44,7 +44,7 @@ LOGO;
 		parent::__construct('Zamm', require __DIR__ . '/../version.php');
 	}
 
-	public function getHelp()
+	public function getHelp(): string
 	{
 		return self::Logo . parent::getHelp();
 	}
@@ -54,7 +54,7 @@ LOGO;
      * 
      * @return Command[] An array of default Command instances
      */
-	public function getDefaultCommands()
+	public function getDefaultCommands(): array
 	{
 		$commands = parent::getDefaultCommands();
 
