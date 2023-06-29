@@ -16,7 +16,8 @@
 	],
 	"minimum-stability": "stable",
 	"require": {
-		"symfony/console": "^5|^6"
+		"maslosoft/staple": "*",
+		"symfony/console": "^5|^6|^7"
 	}
 	,
 	"require-dev": {
