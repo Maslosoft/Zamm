@@ -44,7 +44,7 @@ while order of creating is somewhat like this:
 
 PHP Code <i class="fa fa-arrow-right"></i>
 PHP doc blocks <i class="fa fa-arrow-right"></i>
-[Documentation](docs/)
+[Documentation](https://maslosoft.com/zamm/docs/)
 
 It would be good to have as much as possible to be reused from code or doc blocks in documentation.
 
@@ -54,8 +54,8 @@ To make documentation more consistent with Zamm, documentation can contain PHP c
 code fragments or phpdoc comments extracted from source code. Then theese fragments can be rendered according to context,
 usually wrapped with pre tags, or Markdown fences.
 
-Zamm can [capture code fragments of inline php](docs/capture/), to allow in-place php execution while grabbing it's source at once. 
-Very usefull for [user interface demos](/df/docs/tabs/).
+Zamm can [capture code fragments of inline php](https://maslosoft.com/zamm/docs/capture/), to allow in-place php execution while grabbing it's source at once. 
+Very usefull for [user interface demos](https://maslosoft.com/df/docs/tabs/).
 
 
 <!--/header-->
