@@ -29,7 +29,7 @@ composer require maslosoft/zamm
 
 
 
-##Working examples
+## Working examples
 
 It is quite important for examples or code snippets to actually work.
 When writing documentation in Markdown, Tex or other documentation tools,
@@ -48,7 +48,7 @@ PHP doc blocks <i class="fa fa-arrow-right"></i>
 
 It would be good to have as much as possible to be reused from code or doc blocks in documentation.
 
-###Documentation written in PHP
+### Documentation written in PHP
 
 To make documentation more consistent with Zamm, documentation can contain PHP code snippets, source
 code fragments or phpdoc comments extracted from source code. Then theese fragments can be rendered according to context,
